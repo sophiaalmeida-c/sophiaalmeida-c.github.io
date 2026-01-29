@@ -3,7 +3,9 @@ body {
   margin: 0;
   background-color: #f2f2f2;
   color: #1a1a1a;
-   background-color: pink;}
+   background-color: yellow;}
+h1 { 
+  color: blue;}
 
 nav {
   background: #000;
