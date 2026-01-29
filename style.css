@@ -1,13 +1,8 @@
 body {
   font-family: "TASA Orbiter", TASA Orbiter;
   margin: 0;
-  background-image: url('https://www.pngwing.com/pt/free-png-pyykr'); /* caminho exato */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #1a1a1a;
+  background-color: #bd9ba4; 
 }
-/* Menu de navegação */
 nav {
   background: #000;
   padding: 18px;
