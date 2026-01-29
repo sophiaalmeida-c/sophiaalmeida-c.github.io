@@ -1,11 +1,12 @@
 body {
   font-family: "TASA Orbiter", TASA Orbiter;
   margin: 0;
-  background-image: url('fundo.jpeg'); /* nome exato da imagem */
-  background-size: cover;       /* cobre toda a tela */
-  background-position: center;  /* centraliza */
-  background-repeat: no-repeat; /* não repete */
-  color: #1a1a1a;
+ body {
+  background-color: yellow; /* só para testar */
+  background-image: url('fundo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Menu de navegação */
