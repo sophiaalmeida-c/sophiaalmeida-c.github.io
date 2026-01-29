@@ -1,12 +1,12 @@
 body {
-  font-family: Bodoni Moda SC, TASA Orbiter;
+  font-family: "TASA Orbiter", TASA Orbiter;
   margin: 0;
-  background-color: #ffb6c1;
+  background-color: #e8b7c4;
   color: #1a1a1a;
 }
 
 nav {
-  background: #000;
+  background: #ebdde0;
   padding: 18px;
   text-align: center;
 }
@@ -17,6 +17,7 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
+  font-family: "Bodoni Moda SC", TASA Orbiter
 }
 
 nav a:hover {
