@@ -40,12 +40,10 @@ nav a:hover {
 
 /* Títulos */
 h1 {
-  color: black;
   letter-spacing: 1px;
 }
 
 h2 {
-  color: black;
   margin-top: 20px;
 }
 
@@ -67,6 +65,5 @@ p {
 }
 
 .projeto p {
-  color: black;
   line-height: 1.5;
 }
