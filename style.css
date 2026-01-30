@@ -4,7 +4,7 @@ body {
   background-color: #bd9ba4; 
 }
 nav {
-  background: #000;
+  background: black;
   padding: 18px;
   text-align: center;
 }
@@ -40,12 +40,12 @@ nav a:hover {
 
 /* Títulos */
 h1 {
-  color: #0000
+  color: black;
   letter-spacing: 1px;
 }
 
 h2 {
-  color: #0000;
+  color: black;
   margin-top: 20px;
 }
 
@@ -67,6 +67,6 @@ p {
 }
 
 .projeto p {
-  color: #333;
+  color: black;
   line-height: 1.5;
 }
