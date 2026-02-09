@@ -1,134 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: #f6f7fb;
-  color: #1f1f1f;
-  line-height: 1.6;
+  background: #ffffff;
+  color: #222;
 }
 
-/* =========================
-   HERO – NOVA YORK
-========================= */
-.hero-ny {
+/* HERO */
+.hero {
   height: 49vh;
-  background: url("assets/images/ny.jpg") center/cover no-repeat;
+  background: url("ny-hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-.hero-ny::before {
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(64, 0, 128, 0.75),
-    rgba(32, 64, 160, 0.65)
+    to bottom,
+    rgba(30, 30, 60, 0.35),
+    rgba(255, 255, 255, 0.95)
   );
 }
 
-.hero-content {
+.hero h1 {
   position: relative;
-  height: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.hero-content h2 {
-  margin-top: 12px;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #e0e0ff;
-}
-
-.btn-primary {
-  margin-top: 28px;
-  width: fit-content;
-  padding: 14px 34px;
-  border-radius: 28px;
-
-  background: linear-gradient(135deg, #6a5cff, #4b7bff);
+  z-index: 1;
   color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* =========================
-   SEÇÃO SOBRE / CARDS
-========================= */
-.about {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 24px;
-}
-
-.about h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 600;
 }
 
-.subtitle {
-  margin-top: 8px;
-  color: #666;
-}
-
+/* CARDS */
 .cards {
-  margin-top: 48px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #fff;
 }
 
 .card {
-  background-color: #ffffff;
-  padding: 32px 28px;
-  border-radius: 10px;
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 260px;
+  text-align: center;
 }
 
 .card img {
-  width: 48px;
-  margin-bottom: 18px;
+  width: 36px;
+  margin-bottom: 1rem;
 }
 
 .card h3 {
   font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
-.card p {
-  font-size: 0.95rem;
-  color: #555;
+/* PROJECTS */
+.projects {
+  text-align: center;
+  padding: 4rem 2rem;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+.projects h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
 
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.6rem;
+  background: #2b2b5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/* PAGES */
+.page-header {
+  padding: 3rem 2rem;
+  background: url("data-bg.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.project-list,
+.project-content {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-box {
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.project-content img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 2rem auto;
+}
+
+.note {
+  color: #666;
+  font-size: 0.9rem;
 }
