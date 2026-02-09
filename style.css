@@ -122,3 +122,40 @@ nav a {
   font-family: 'Poppins';
   margin-bottom: 10px;
 }
+.grafico {
+  margin-top: 60px;
+}
+
+.grafico img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.grafico-texto {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.grafico-texto p {
+  margin-bottom: 20px;
+}
+
+.grafico-texto .fonte {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.grafico-texto .observacao {
+  font-size: 0.95rem;
+  color: #555;
+  background: #f2f2f8;
+  padding: 15px;
+  border-left: 4px solid #6c63ff;
+  border-radius: 6px;
+}
