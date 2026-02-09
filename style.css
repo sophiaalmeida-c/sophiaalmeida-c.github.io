@@ -10,7 +10,7 @@ body {
   color: #222;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   height: 49vh;
   background: url("ny-hero.jpg") center/cover no-repeat;
@@ -26,34 +26,47 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(30, 30, 60, 0.35),
-    rgba(255, 255, 255, 0.95)
+    rgba(30, 30, 60, 0.15),
+    rgba(120, 90, 200, 0.25)
   );
 }
 
 .hero h1 {
   position: relative;
   z-index: 1;
-  color: white;
-  font-size: 2.3rem;
+  color: #ffffff;
+  font-size: 2.4rem;
   font-weight: 600;
+  text-align: center;
 }
 
-/* CARDS */
+/* ============ FUNDO ROXO / AZUL ============ */
+.cards-wrapper {
+  background: linear-gradient(
+    135deg,
+    #2b2b5f,
+    #4b3b8f,
+    #6a5acd
+  );
+  padding: 4rem 2rem;
+}
+
+/* ================= CARDS ================= */
 .cards {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 3rem 2rem;
-  background: #fff;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card {
-  background: #f9f9f9;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 14px;
   padding: 2rem;
   width: 260px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card img {
@@ -64,12 +77,19 @@ body {
 .card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: #2b2b5f;
 }
 
-/* PROJECTS */
+.card p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ================= PROJECTS ================= */
 .projects {
   text-align: center;
   padding: 4rem 2rem;
+  background: #ffffff;
 }
 
 .projects h2 {
@@ -77,17 +97,23 @@ body {
   margin-bottom: 1rem;
 }
 
+.projects p {
+  max-width: 700px;
+  margin: auto;
+  color: #444;
+}
+
 .btn {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.6rem;
+  margin-top: 1.8rem;
+  padding: 0.7rem 1.8rem;
   background: #2b2b5f;
   color: white;
   text-decoration: none;
   border-radius: 20px;
 }
 
-/* PAGES */
+/* ================= PAGES ================= */
 .page-header {
   padding: 3rem 2rem;
   background: url("data-bg.jpg") center/cover no-repeat;
