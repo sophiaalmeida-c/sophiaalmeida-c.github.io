@@ -5,67 +5,43 @@
   <title>Projetos | Sophia Almeida</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header style="
-    min-height: 60vh;
-    background: linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)
-    ),
-    url('nyc.jpg');
-    background-size: cover;
-    background-position: center;
-  ">
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="projects.html">Projetos</a>
-      <a href="index.html#sobre">Sobre</a>
-      <a href="#">Contato</a>
-    </nav>
+<section class="projects-hero">
+  <h1>Projetos</h1>
+  <p>Dados, matemática e impacto social</p>
+</section>
 
-    <div class="hero">
-      <h1>Projetos</h1>
-      <h2>Dados, matemática e impacto social</h2>
-      <p>
-        Projetos desenvolvidos com foco em análise de dados,
-        desigualdade social e investigação quantitativa.
-      </p>
-    </div>
-  </header>
+<section class="projects-container">
 
-  <!-- LISTA DE PROJETOS -->
-  <section>
-    <div class="cards">
+  <div class="project-card">
+    <h2>Desigualdade Educacional no Brasil</h2>
+    <p>
+      Análise da correlação entre renda média municipal e o IDEB,
+      utilizando dados públicos do IBGE e INEP.
+    </p>
+    <span class="status">Concluído</span>
+  </div>
 
-      <!-- PROJETO 1 -->
-      <div class="card">
-        <h3>Desigualdade Educacional no Brasil</h3>
-        <p>
-          Análise da correlação entre renda média municipal
-          e o IDEB dos anos finais do ensino fundamental,
-          utilizando dados públicos do IBGE e INEP.
-        </p>
-        <a href="projeto1.html" class="botao">Ver projeto</a>
-      </div>
+  <div class="project-card">
+    <h2>Mulheres e Desigualdade nas Finanças</h2>
+    <p>
+      Estudo exploratório sobre a presença feminina em áreas
+      financeiras e educacionais.
+    </p>
+    <span class="status">Em desenvolvimento</span>
+  </div>
 
-      <!-- PROJETO 2 (FUTURO) -->
-      <div class="card">
-        <h3>Acesso à tecnologia como fator de desigualdade de oportunidades acadêmicas/h3>
-        <p>
-          Investigação de indicadores sociais para entender
-          como fatores econômicos afetam o acesso à educação
-          de qualidade.
-        </p>
-        <span style="color: var(--cinza); font-size: 0.9rem;">
-          Em desenvolvimento
-        </span>
-      </div>
+  <div class="project-card">
+    <h2>Educação, Renda e Oportunidades</h2>
+    <p>
+      Investigação de indicadores sociais para compreender
+      como fatores econômicos afetam o acesso à educação.
+    </p>
+    <span class="status">Em desenvolvimento</span>
+  </div>
 
-    </div>
-  </section>
+</section>
 
 </body>
 </html>
