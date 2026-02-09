@@ -5,12 +5,16 @@
   font-family: "Inter", Arial, sans-serif;
 }
 
-body {
-  background: #0e0e14;
-  color: #eaeaea;
-  line-height: 1.7;
-}
 
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background-image: url("ny-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #1a1a1a;
+}
 /* HERO */
 .hero {
   min-height: 100vh;
