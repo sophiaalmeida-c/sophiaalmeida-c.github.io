@@ -2,44 +2,50 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Sophia Almeida Costa</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Sophia Almeida</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 style="color:red;">TESTE VISÍVEL</h1>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Sophia Almeida Costa</h1>
-      <p>Estudante • Ciência de Dados • Projetos Acadêmicos</p>
-      <a href="projects.html" class="btn">Ver projetos</a>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projetos</a>
+  <a href="#">Pesquisa</a>
+  <a href="#">Contato</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Sophia Almeida</h1>
+    <p>Aspirante a Cientista de Dados & Impacto Social</p>
+    <button onclick="location.href='projects.html'">Ver Meus Projetos</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Sobre Mim</h2>
+  <p>Motivada por matemática, dados e Nova York</p>
+
+  <div class="cards">
+    <div class="card">
+      <img src="icons/chart.svg">
+      <h3>Análise de Dados</h3>
+      <p>Investigando desigualdades sociais usando Python.</p>
     </div>
-  </section>
 
-  <section class="section-light">
-    <div class="container">
-      <h2>Sobre mim</h2>
-      <p>
-        Sou estudante do ensino médio com interesse em Ciência de Dados,
-        Matemática e Finanças. Desenvolvo projetos acadêmicos utilizando
-        dados públicos, com foco em desigualdade social e educação.
-      </p>
+    <div class="card">
+      <img src="icons/leadership.svg">
+      <h3>Liderança e Iniciativa</h3>
+      <p>Projetos voltados para impacto social e educacional.</p>
     </div>
-  </section>
 
-  <section class="section-light">
-    <div class="container">
-      <h2>Projetos</h2>
-
-      <div class="project-card">
-        <h3>Renda média e desempenho escolar no Brasil</h3>
-        <p>
-          Análise do IDEB por estado brasileiro utilizando dados públicos.
-        </p>
-        <a href="projeto1.html">Ver projeto</a>
-      </div>
-
+    <div class="card">
+      <img src="icons/medal.svg">
+      <h3>Conquistas Acadêmicas</h3>
+      <p>Prêmios e participações em olimpíadas científicas.</p>
     </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
