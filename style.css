@@ -1,4 +1,29 @@
-/* RESET BÁSICO */
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-SemiBold.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Medium.ttf');
+  font-weight: 500;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,89 +31,94 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #1a1a1a;
-  background-color: #f4f4f4;
+  font-family: 'Inter', sans-serif;
+  background: #f7f7fb;
+  color: #2c2c2c;
+}
+
+/* NAV */
+nav {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+}
+nav a {
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins';
+  font-weight: 500;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
-  background-image: url("nyc.jpg");
-  background-size: cover;
-  background-position: center;
+  background:
+    linear-gradient(to right, rgba(85,50,180,.85), rgba(255,140,180,.75)),
+    url("images/ny-hero.jpg") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-content {
-  background-color: rgba(255, 255, 255, 0.88);
-  padding: 50px 60px;
-  border-radius: 14px;
   text-align: center;
-  max-width: 700px;
+  color: white;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
+  font-family: 'Poppins';
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 25px;
+  margin-top: 15px;
+  font-size: 1.2rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  background-color: #6d1f2c;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-/* SEÇÕES CLARAS */
-.section-light {
-  background-color: #f4f4f4;
-  padding: 90px 20px;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-}
-
-.section-light h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-}
-
-/* CARDS DE PROJETO */
-.project-card {
-  background-color: white;
-  padding: 35px;
-  border-radius: 14px;
+.hero button {
   margin-top: 30px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  padding: 15px 35px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 600;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
 }
 
-.project-card h3 {
+/* SEÇÕES */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Poppins';
+  font-size: 2.4rem;
   margin-bottom: 10px;
 }
 
-.project-card p {
-  color: #555;
-  line-height: 1.6;
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
-.project-card a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #6d1f2c;
-  text-decoration: none;
-  font-weight: bold;
+.card {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.card img {
+  width: 55px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-family: 'Poppins';
+  margin-bottom: 10px;
 }
