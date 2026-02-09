@@ -2,66 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Sophia Almeida - Data Science Portfolio</title>
+  <title>Sophia Almeida</title>
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero-home">
+    <div class="overlay"></div>
+
     <div class="hero-content">
       <h1>Sophia Almeida</h1>
-      <p>Estudante interessada em tecnologia, dados e educação</p>
+      <h2>Aspirante a Cientista de Dados & Impacto Social</h2>
 
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">Projetos</a>
-        <a href="#project1" class="btn secondary">Projeto 1</a>
-      </div>
+      <a href="#projects" class="btn-main">Ver meus projetos</a>
     </div>
   </section>
 
   <!-- PROJETOS -->
-  <main class="content">
+  <section id="projects" class="projects-section">
+    <h2>Projetos</h2>
+    <p class="projects-subtitle">
+      Dados, matemática e impacto social
+    </p>
 
-    <section id="projects" class="projects">
-      <h2>Projetos</h2>
+    <div class="projects-grid">
 
-      <div id="project1" class="project-card">
-        <h3>Projeto 1 — Análise do IDEB (2019)</h3>
-
-        <img src="ideb-estados.png" alt="Gráfico IDEB por estado">
-
+      <div class="project-card">
+        <img src="icons/chart.svg" alt="Ícone gráfico">
+        <h3>Desigualdade Educacional no Brasil</h3>
         <p>
-          Neste projeto, analisei os dados do IDEB dos anos finais do ensino fundamental
-          por estado brasileiro no ano de 2019. Os valores foram organizados em uma
-          planilha e ordenados do menor para o maior índice.
+          Análise do IDEB e desigualdades regionais na educação básica.
         </p>
-
-        <p>
-          Observa-se que os estados com menores índices concentram-se nas regiões Norte e
-          Nordeste, enquanto Sul, Sudeste e parte do Centro-Oeste apresentam melhores
-          resultados.
-        </p>
-
-        <p>
-          Essa diferença evidencia desigualdades regionais na educação básica,
-          possivelmente relacionadas a fatores socioeconômicos, investimento público e
-          infraestrutura escolar.
-        </p>
-
-        <p class="note">
-          Dados públicos de 2019, último ano com informações completas antes da pandemia.
-        </p>
+        <a href="projeto1.html" class="btn-card">Ver projeto</a>
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
 </body>
 </html>
