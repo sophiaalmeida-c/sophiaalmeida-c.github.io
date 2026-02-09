@@ -13,12 +13,7 @@ body {
 /* ================= HERO ================= */
 .hero {
   height: 49vh;
-  background: linear-gradient(
-      to bottom,
-      rgba(90, 80, 170, 0.45),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("ny-hero.jpg") center/cover no-repeat;
+  background: url("ny-hero.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
