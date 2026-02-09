@@ -100,26 +100,31 @@ html, body {
   font-size: 1.4rem;
   margin-bottom: 40px;
   position: relative;
+  width: 100%;
 }
 
-.section-title::before,
-.section-title::after {
+.section-title span {
+  position: relative;
+  padding: 0 20px;
+}
+
+.section-title span::before,
+.section-title span::after {
   content: "";
-  width: 60px;
-  height: 2px;
-  background-color: #ffffff70;
   position: absolute;
   top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255,255,255,0.6);
 }
 
-.section-title::before {
-  left: 35%;
+.section-title span::before {
+  right: 100%;
 }
 
-.section-title::after {
-  right: 35%;
+.section-title span::after {
+  left: 100%;
 }
-
 /* =====================
    CARDS / CAIXINHAS
 ===================== */
