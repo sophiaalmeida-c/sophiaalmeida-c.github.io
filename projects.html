@@ -1,41 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Projetos</title>
+  <title>Projetos | Sophia Almeida</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <nav>
-    <a href="index.html" class="home-link">Home</a>
-    <a href="projects.html">Projetos</a>
-  </nav>
 
-  <div class="container">
-   
-    <h1>Projetos de análise de dados</h1>
-    <ul>
-<div class="projeto">
-  <h3>Renda média e desempenho escolar no Brasil (2019)</h3>
-  <p>
-    Análise da relação entre renda média estadual e o IDEB dos anos finais do ensino fundamental,
-    utilizando dados públicos do IBGE e INEP.
-  </p>
-  <p><strong>Pergunta de pesquisa:</strong> estados com maior renda média apresentam melhores resultados no IDEB?</p>
-  <p><strong>Por que esse projeto é importante?</strong></p>
-  <p>Entender como fatores economicos infuenciam a quaidade da educação pode ajudar na criação de politicas eficazes.</p>
-  <p><strong>Metodologia:</strong> coleta de dados publicos do IBGE e INEP, organização em planilias e análise da correlação entre a média municipal e o IDEP por meio de graficos e estátisticas básicas.</p>
-  <br>
-  <p><strong>RESULTADOS:</strong></p>
- <button> <a href="projeto1.html">Ver detalhes do projeto</a> </button>  <div class="projeto">
-  <h2>projeto 2</h2>
-     <div class="projeto">
-  <h2>(Nome do próximo projeto)</h2>
-  <p>
-    Breve descrição do que você vai analisar.
-  </p>
-</div>
-    </ul>
-  </div> </div>
-    </body>
-    </html>
+<body>
+
+  <!-- HEADER -->
+  <header style="
+    min-height: 60vh;
+    background: linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url('nyc.jpg');
+    background-size: cover;
+    background-position: center;
+  ">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="projects.html">Projetos</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+
+    <div class="hero">
+      <h1>Projetos</h1>
+      <h2>Dados, matemática e impacto social</h2>
+      <p>
+        Projetos desenvolvidos com foco em análise de dados,
+        desigualdade social e investigação quantitativa.
+      </p>
+    </div>
+  </header>
+
+  <!-- LISTA DE PROJETOS -->
+  <section>
+    <div class="cards">
+
+      <!-- PROJETO 1 -->
+      <div class="card">
+        <h3>Desigualdade Educacional no Brasil</h3>
+        <p>
+          Análise da correlação entre renda média municipal
+          e o IDEB dos anos finais do ensino fundamental,
+          utilizando dados públicos do IBGE e INEP.
+        </p>
+        <a href="projeto1.html" class="botao">Ver projeto</a>
+      </div>
+
+      <!-- PROJETO 2 (FUTURO) -->
+      <div class="card">
+        <h3>Acesso à tecnologia como fator de desigualdade de oportunidades acadêmicas/h3>
+        <p>
+          Investigação de indicadores sociais para entender
+          como fatores econômicos afetam o acesso à educação
+          de qualidade.
+        </p>
+        <span style="color: var(--cinza); font-size: 0.9rem;">
+          Em desenvolvimento
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
