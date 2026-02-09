@@ -1,136 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: #f6f6f6;
-  color: #222;
+  background-color: #f6f7fb;
+  color: #1f1f1f;
+  line-height: 1.6;
 }
 
-/* NAVBAR */
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  z-index: 10;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-/* HERO HOME */
-.hero-home {
+/* =========================
+   HERO – NOVA YORK
+========================= */
+.hero-ny {
   height: 49vh;
   background: url("assets/images/ny.jpg") center/cover no-repeat;
   position: relative;
 }
 
-.hero-projects {
-  height: 40vh;
-  background: url("assets/images/bg-projects.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-.hero-project {
-  height: 40vh;
-  background: linear-gradient(135deg,#5b2cff,#8b3cff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.hero-overlay {
+.hero-ny::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(91,44,255,0.75);
+  background: linear-gradient(
+    135deg,
+    rgba(64, 0, 128, 0.75),
+    rgba(32, 64, 160, 0.65)
+  );
 }
 
-.hero-text {
+.hero-content {
   position: relative;
   height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
 }
 
-.hero-text h1 {
+.hero-content h1 {
   font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-.hero-text h2 {
+.hero-content h2 {
+  margin-top: 12px;
+  font-size: 1.2rem;
   font-weight: 300;
-  margin: 1rem 0;
+  color: #e0e0ff;
 }
 
-.btn-main {
-  background: #6a5cff;
-  padding: 14px 30px;
-  border-radius: 30px;
+.btn-primary {
+  margin-top: 28px;
+  width: fit-content;
+  padding: 14px 34px;
+  border-radius: 28px;
+
+  background: linear-gradient(135deg, #6a5cff, #4b7bff);
   color: white;
   text-decoration: none;
+  font-weight: 500;
 }
 
-/* PROJECTS GRID */
-.projects-grid {
+/* =========================
+   SEÇÃO SOBRE / CARDS
+========================= */
+.about {
   max-width: 1100px;
-  margin: -80px auto 80px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #666;
+}
+
+.cards {
+  margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 32px;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  padding: 32px 28px;
+  border-radius: 10px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .card img {
-  width: 60px;
-  margin-bottom: 15px;
+  width: 48px;
+  margin-bottom: 18px;
 }
 
-.btn-card {
-  display: inline-block;
-  margin-top: 15px;
-  background: #5b2cff;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 20px;
-  text-decoration: none;
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.tag {
-  display: inline-block;
-  margin-top: 15px;
-  color: #888;
+.card p {
+  font-size: 0.95rem;
+  color: #555;
 }
 
-/* PROJECT PAGE */
-.project-content {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-.project-content img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 30px;
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
 }
