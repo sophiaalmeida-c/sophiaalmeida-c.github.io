@@ -1,29 +1,3 @@
-@font-face {
-  font-family: 'Poppins';
-  src: url('fonts/Poppins-Regular.ttf');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('fonts/Poppins-SemiBold.ttf');
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('fonts/Poppins-Bold.ttf');
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('fonts/Inter-Regular.ttf');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('fonts/Inter-Medium.ttf');
-  font-weight: 500;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -31,131 +5,78 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #f7f7fb;
-  color: #2c2c2c;
-}
-
-/* NAV */
-nav {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-}
-nav a {
-  margin-left: 30px;
-  color: white;
-  text-decoration: none;
-  font-family: 'Poppins';
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f7;
+  color: #333;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
+  height: 30vh; /* 👈 só 30% da tela */
   background:
-    linear-gradient(to right, rgba(85,50,180,.85), rgba(255,140,180,.75)),
-    url("images/ny-hero.jpg") center/cover;
+    linear-gradient(135deg, rgba(88, 24, 124, 0.85), rgba(58, 12, 163, 0.85)),
+    url("ny-hero.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+}
+
+.hero-content {
+  padding: 0 8%;
   color: white;
 }
 
-.hero h1 {
-  font-family: 'Poppins';
-  font-size: 3.5rem;
-  font-weight: 700;
-}
-
-.hero p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-}
-
-.hero button {
-  margin-top: 30px;
-  padding: 15px 35px;
-  border-radius: 8px;
-  border: none;
-  font-family: 'Poppins';
+.hero-content h1 {
+  font-size: 2.2rem;
   font-weight: 600;
-  background: #6c63ff;
-  color: white;
-  cursor: pointer;
 }
 
-/* SEÇÕES */
-.section {
-  padding: 80px 10%;
-  text-align: center;
+.hero-content p {
+  margin-top: 8px;
+  font-weight: 300;
 }
 
-.section-title {
-  font-family: 'Poppins';
-  font-size: 2.4rem;
-  margin-bottom: 10px;
+/* ÍCONES */
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
 }
 
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+.social-icons img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
 }
 
-.card {
-  background: white;
-  padding: 40px 25px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+.social-icons img:hover {
+  transform: scale(1.15);
 }
 
-.card img {
-  width: 55px;
+/* CONTEÚDO */
+.content {
+  padding: 50px 8%;
+}
+
+.project h2 {
   margin-bottom: 20px;
+  font-size: 1.6rem;
 }
 
-.card h3 {
-  font-family: 'Poppins';
-  margin-bottom: 10px;
-}
-.grafico {
-  margin-top: 60px;
-}
-
-.grafico img {
+.project img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+  margin: 20px 0;
+  border-radius: 8px;
 }
 
-.grafico-texto {
-  margin-top: 40px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  line-height: 1.7;
-  font-size: 1rem;
+.project p {
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
-.grafico-texto p {
-  margin-bottom: 20px;
-}
-
-.grafico-texto .fonte {
+.note {
   font-size: 0.9rem;
   color: #666;
-}
-
-.grafico-texto .observacao {
-  font-size: 0.95rem;
-  color: #555;
-  background: #f2f2f8;
-  padding: 15px;
-  border-left: 4px solid #6c63ff;
-  border-radius: 6px;
 }
