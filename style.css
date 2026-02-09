@@ -1,80 +1,202 @@
-body {
-  font-family: "TASA Orbiter", TASA Orbiter;
+/* RESET BÁSICO */
+* {
   margin: 0;
-  background-color: #bd9ba4; 
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* VARIÁVEIS DE DESIGN */
+:root {
+  --cor-primaria: #3b4cca;      /* azul */
+  --cor-secundaria: #7b5cff;    /* roxo */
+  --cor-destaque: #e26d5c;      /* coral/rosa */
+  --fundo-claro: #f7f8fc;
+  --texto-escuro: #1f2933;
+  --texto-claro: #ffffff;
+  --cinza: #6b7280;
+}
+
+/* FONTE GLOBAL */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: var(--fundo-claro);
+  color: var(--texto-escuro);
+  line-height: 1.6;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= HEADER / HERO ================= */
+
+header {
+  min-height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #1e3a8a,
+    #6d28d9,
+    #f472b6
+  );
+  color: var(--texto-claro);
+  padding: 2.5rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* GRÁFICOS DECORATIVOS */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    );
+  background-size: 60px 60px;
+  opacity: 0.4;
+}
+
+/* NAVBAR */
 nav {
-  background: black;
-  padding: 18px;
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  font-weight: 500;
+  z-index: 1;
+  position: relative;
 }
 
 nav a {
-  color: #ebdde0;
-  margin: 0 18px;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-family: "Bodoni Moda SC", TASA Orbiter;
-  font-size: 20px; /* tamanho padrão dos links */
-}
-
-nav a.home-link {
-  font-size: 24px; /* Home maior */
+  opacity: 0.9;
 }
 
 nav a:hover {
-  opacity: 0.7;
+  opacity: 1;
+  text-decoration: underline;
 }
 
-/* Quadrado rosa bebê */
-.container {
+/* CONTEÚDO DO HERO */
+.hero {
   max-width: 900px;
-  min-height: 400px; /* garante altura mínima */
-  margin: 60px auto;
-  background: #ebdde0;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  margin-top: 6rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Títulos */
-h1 {
-  letter-spacing: 1px;
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-h2 {
-  margin-top: 20px;
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
 }
 
-/* Parágrafos */
-p {
-  line-height: 1.7;
-  font-size: 17px;
-}
-.projeto {
-  background: #f4f4f4;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
 }
 
-.projeto h2 {
-  margin-bottom: 10px;
+/* BOTÃO */
+.botao {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background-color: var(--cor-secundaria);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.projeto p {
-  line-height: 1.5;
-}
-.projeto {
-  background: #f9f9f9;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.botao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-.projeto h2 {
-  margin-top: 0;
+/* ================= SEÇÃO SOBRE ================= */
+
+section {
+  padding: 5rem 6rem;
+}
+
+.sobre {
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.sobre p.subtitulo {
+  color: var(--cinza);
+  margin-bottom: 3.5rem;
+  font-size: 1.1rem;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: var(--cinza);
+  font-size: 0.95rem;
+}
+
+/* ÍCONES SIMPLES */
+.icone {
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+  header,
+  section {
+    padding: 2.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
 }
