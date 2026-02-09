@@ -1,6 +1,6 @@
-/* =====================
-   RESET BÁSICO
-===================== */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,28 +13,33 @@ html, body {
   color: #ffffff;
 }
 
-/* =====================
+/* =========================
    HERO / INÍCIO
-===================== */
+========================= */
 .hero {
   position: relative;
   height: 49vh;
-  background: url("ny-hero.jpg") center/cover no-repeat;
+  background-image: url("ny-hero.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
+/* overlay roxo SUAVE */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(80, 40, 120, 0.85),
-    rgba(40, 20, 80, 0.65)
+    rgba(70, 40, 120, 0.45),
+    rgba(30, 20, 80, 0.35)
   );
 }
 
+/* conteúdo do hero */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -43,247 +48,160 @@ html, body {
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
 .hero h2 {
   font-size: 1.2rem;
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
   font-weight: 500;
 }
 
 .hero p {
-  margin-top: 0.8rem;
+  margin-top: 0.7rem;
   font-size: 0.95rem;
   opacity: 0.9;
 }
 
+/* botão principal */
 .btn-primary {
   display: inline-block;
   margin-top: 1.2rem;
-  background-color: #7a4cff;
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #7a4cff, #5b3bff);
+  color: #ffffff;
   text-decoration: none;
+  border-radius: 10px;
   font-weight: 500;
 }
 
-/* =====================
+/* =========================
    IMAGEM GEOGRÁFICA
-===================== */
+========================= */
 .geo-overlay {
   position: absolute;
-  bottom: -15%;
   left: 0;
-  width: 32%;
+  bottom: -10%;
+  width: 30%;
+  opacity: 0.3;
+  mix-blend-mode: screen;
   z-index: 3;
-  opacity: 0.9;
 }
 
 .geo-overlay img {
   width: 100%;
 }
 
-/* =====================
-   SOBRE MIM + FUNDO ROXO
-===================== */
+/* =========================
+   SOBRE MIM
+========================= */
 .about {
   background-color: #3a2266;
   padding: 90px 8% 70px;
-  position: relative;
 }
 
+/* título com linhas */
 .section-title {
   text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 40px;
-  position: relative;
-  width: 100%;
+  margin-bottom: 50px;
 }
 
 .section-title span {
   position: relative;
+  font-size: 1.4rem;
   padding: 0 20px;
 }
 
 .section-title span::before,
-.section-title span::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(255,255,255,0.6);
+.
+/* =========================
+   PROJETOS — SEÇÃO PRINCIPAL
+========================= */
+
+/* fundo geral da seção de projetos */
+.projects-section {
+  background-color: #3a2266;
+  padding: 90px 8% 80px;
 }
 
-.section-title span::before {
-  right: 100%;
+/* título "Projetos" (caso use fora do hero) */
+.projects-title {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.section-title span::after {
-  left: 100%;
-}
-/* =====================
-   CARDS / CAIXINHAS
-===================== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.card {
-  background-color: #ffffff;
-  color: #2a2a2a;
-  border-radius: 14px;
-  padding: 26px 22px;
-  text-align: left;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.card img {
-  width: 28px;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.card p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  opacity: 0.85;
-}
-
-/* =====================
-   PROJETOS (OUTRA PÁGINA)
-===================== */
-.projects {
-  background-color: #2f1c4f;
-  padding: 80px 8%;
-}
-
-.project-card {
-  background-color: #ffffff;
-  color: #2a2a2a;
-  border-radius: 14px;
-  padding: 28px;
-  margin-top: 30px;
-}
-
-.btn-secondary {
-  display: inline-block;
-  margin-top: 14px;
-  color: #7a4cff;
-  font-weight: 500;
-  text-decoration: none;
-}
-/* =====================
-   HERO PROJETOS
-===================== */
-.projects-hero {
-  position: relative;
-  height: 49vh;
-  background: url("data-bg4.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-}
-
-.projects-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(70, 30, 120, 0.9),
-    rgba(30, 20, 90, 0.75)
-  );
-}
-
-.projects-hero-content {
-  position: relative;
-  z-index: 2;
-  padding-left: 8%;
-  max-width: 700px;
-}
-
-.projects-hero h1 {
-  font-size: 3rem;
+.projects-title h2 {
+  font-size: 2rem;
   font-weight: 700;
 }
 
-.projects-hero h2 {
-  font-size: 1.3rem;
-  margin-top: 0.6rem;
-  font-weight: 500;
-}
-
-.projects-hero p {
-  margin-top: 0.8rem;
+.projects-title p {
+  margin-top: 10px;
   font-size: 1rem;
   opacity: 0.9;
 }
 
-/* =====================
-   GRID DE PROJETOS
-===================== */
-.projects-grid {
-  background-color: #3a2266;
-  padding: 80px 8%;
+/* =========================
+   QUADRINHOS DE PROJETOS
+========================= */
+.projects-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  gap: 32px;
 }
 
-.project-box {
+/* cada projeto */
+.project-card {
   background-color: #ffffff;
   color: #2a2a2a;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.project-box h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+.project-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
 }
 
-.project-box p {
+.project-card p {
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
   opacity: 0.85;
 }
 
-/* =====================
-   BOTÕES
-===================== */
-.btn-project {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
+/* =========================
+   BOTÕES DOS PROJETOS
+========================= */
 
 /* botão ativo */
-.btn-project.active {
+.project-btn {
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+}
+
+/* ver projeto */
+.project-btn.active {
   background: linear-gradient(
     90deg,
     #4da3ff,
-    #5a2fff
+    #4b2fff
   );
   color: #ffffff;
 }
 
-/* botão inativo */
-.btn-project.disabled {
+/* em desenvolvimento */
+.project-btn.disabled {
   background-color: #e6d9ff;
   color: #6a3dbf;
   cursor: not-allowed;
