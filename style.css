@@ -74,10 +74,6 @@ body {
 }
 
 /* ================= SOBRE MIM ================= */
-.about {
-  background: white;
-  padding: 3rem 2rem 1.5rem;
-}
 
 .about-title {
   display: flex;
@@ -139,4 +135,22 @@ body {
 .card p {
   font-size: 0.9rem;
   color: #444;
+}
+.about-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.about-title h3 {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.about-title span {
+  width: 60px;
+  height: 1px;
+  background: rgba(255,255,255,0.6);
 }
