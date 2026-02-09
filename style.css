@@ -1,212 +1,180 @@
+/* =====================
+   RESET BÁSICO
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
-body {
-  background: #ffffff;
-  color: #222;
+html, body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2f1c4f;
+  color: #ffffff;
 }
 
-/* ================= HERO ================= */
+/* =====================
+   HERO / INÍCIO
+===================== */
 .hero {
+  position: relative;
   height: 49vh;
   background: url("ny-hero.jpg") center/cover no-repeat;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(80, 40, 120, 0.85),
+    rgba(40, 20, 80, 0.65)
+  );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 700px;
-  padding: 1rem;
+  padding-left: 8%;
+  max-width: 600px;
 }
 
 .hero h1 {
-  color: white;
-  font-size: 2.3rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .hero h2 {
-  color: #eae6ff;
-  font-weight: 400;
+  font-size: 1.2rem;
   margin-top: 0.6rem;
+  font-weight: 500;
 }
 
 .hero p {
-  color: #f2f2f2;
-  font-size: 0.95rem;
   margin-top: 0.8rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
-.btn-hero {
+.btn-primary {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.8rem;
-  background: #5a4fcf;
-  color: white;
+  margin-top: 1.2rem;
+  background-color: #7a4cff;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 25px;
-  font-size: 0.9rem;
-}
-
-/* imagem sobreposta */
-.hero-overlay {
-  position: absolute;
-  left: -40px;
-  bottom: -30px;
-  width: 280px;
-  opacity: 0.85;
-  z-index: 1;
-}
-
-/* ================= SOBRE MIM ================= */
-
-.about-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.about-title h3 {
   font-weight: 500;
-  color: #2b2b5f;
 }
 
-.about-title span {
+/* =====================
+   IMAGEM GEOGRÁFICA
+===================== */
+.geo-overlay {
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  width: 32%;
+  z-index: 3;
+  opacity: 0.9;
+}
+
+.geo-overlay img {
+  width: 100%;
+}
+
+/* =====================
+   SOBRE MIM + FUNDO ROXO
+===================== */
+.about {
+  background-color: #3a2266;
+  padding: 90px 8% 70px;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
   width: 60px;
-  height: 1px;
-  background: #ccc;
+  height: 2px;
+  background-color: #ffffff70;
+  position: absolute;
+  top: 50%;
 }
 
-/* ============ FUNDO ROXO / AZUL ============ */
-.cards-wrapper {
-  background: linear-gradient(
-    135deg,
-    #6b63d9,
-    #8a7cff
-  );
-  padding: 4rem 2rem;
+.section-title::before {
+  left: 35%;
 }
 
-/* ================= CARDS ================= */
+.section-title::after {
+  right: 35%;
+}
+
+/* =====================
+   CARDS / CAIXINHAS
+===================== */
 .cards {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 2rem;
-  width: 260px;
-  text-align: center;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+  background-color: #ffffff;
+  color: #2a2a2a;
+  border-radius: 14px;
+  padding: 26px 22px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card img {
-  width: 36px;
-  margin-bottom: 1rem;
+  width: 28px;
+  margin-bottom: 12px;
 }
 
 .card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-  color: #2b2b5f;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
 
 .card p {
-  font-size: 0.9rem;
-  color: #444;
-}
-.about-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.85;
 }
 
-.about-title h3 {
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.about-title span {
-  width: 60px;
-  height: 1px;
-  background: rgba(255,255,255,0.6);
-}
+/* =====================
+   PROJETOS (OUTRA PÁGINA)
+===================== */
 .projects {
-  background: #ffffff;
-  padding: 5rem 2rem;
-}
-
-.projects-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.projects-title h3 {
-  font-weight: 500;
-  color: #2d1b45;
-}
-
-.projects-title span {
-  width: 60px;
-  height: 1px;
-  background: rgba(45, 27, 69, 0.4);
-}
-
-.projects-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  background-color: #2f1c4f;
+  padding: 80px 8%;
 }
 
 .project-card {
-  background: #f7f5fb;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  color: #2a2a2a;
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 30px;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.project-card h4 {
-  color: #2d1b45;
-  margin-bottom: 0.5rem;
-}
-
-.project-card p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1.2rem;
-}
-
-.project-card a {
-  text-decoration: none;
-  color: #6a4df4;
+.btn-secondary {
+  display: inline-block;
+  margin-top: 14px;
+  color: #7a4cff;
   font-weight: 500;
+  text-decoration: none;
 }
