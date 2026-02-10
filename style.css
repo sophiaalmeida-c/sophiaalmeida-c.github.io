@@ -1,264 +1,128 @@
+/* ================= FONTES ================= */
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: #ffffff;
-  color: #222;
+  font-family: "Libre Baskerville", serif;
+  background-color: #f5f4f2; /* off white */
+  color: #1e1e1e;
+  line-height: 1.6;
 }
 
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  text-align: center;
+  background: url("bg-alterado.jpg") center/cover no-repeat;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-.hero::before {
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(45, 27, 69, 0.65),
-    rgba(30, 20, 80, 0.45)
-  );
-  z-index: -1;
+  background: rgba(255, 255, 255, 0.78); /* véu branco */
 }
 
 .hero-content {
-  text-align: center;
-  max-width: 720px;
-  padding: 1rem;
-  color: white;
+  position: relative;
+  max-width: 800px;
+  padding: 2rem;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: 700;
 }
 
 .hero h2 {
   font-size: 1.1rem;
   font-weight: 400;
-  margin-top: 0.6rem;
-}
-
-.hero p {
-  font-size: 0.95rem;
   margin-top: 0.8rem;
+  color: #444;
 }
 
-.btn-hero {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 2rem;
-  background: linear-gradient(to right, #6a4df4, #4a90e2);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  font-weight: 500;
+/* ================= SEÇÕES ================= */
+.section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
 }
 
-/* ================= CARDS ================= */
-.cards-wrapper {
-  background: #f4f3f8;
-  padding: 4rem 2rem;
-}
-
-.cards {
+/* ---- título tipo - sobre mim - ---- */
+.section-title {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: auto;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+  margin-bottom: 1.8rem;
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 2rem;
-  width: 260px;
-  text-align: center;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+.section-title::before,
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #cfcfcf;
 }
 
-.card img {
-  width: 36px;
+/* ================= TEXTO ================= */
+.section p {
+  font-size: 0.95rem;
+  color: #333;
   margin-bottom: 1rem;
 }
 
-.card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-  color: #2d1b45;
-  font-weight: 500;
-}
-
-.card p {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* ================= HERO PROJETOS ================= */
-.projects-hero {
-  position: relative;
-  height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
-
-.projects-hero-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0.9;
-}
-
-.projects-hero-content h1 {
-  font-size: 2.3rem;
-  font-weight: 600;
-}
-
-.projects-hero-content h2 {
-  font-size: 1.05rem;
-  font-weight: 400;
-  margin-top: 0.5rem;
-}
-
-/* ================= PROJETOS GRID ================= */
-.projects-wrapper {
-  background: url("bg-geral.jpg") center/cover no-repeat;
-  padding: 4rem 2rem;
-}
-
+/* ================= PROJETOS ================= */
 .projects-grid {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-.project-box {
-  background: rgba(255, 255, 255, 0.95);
+.project-card {
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
 }
 
-.project-box img {
-  width: 36px;
-  margin-bottom: 1rem;
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
 }
 
-.project-box h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #2d1b45;
-}
-
-.project-box p {
+.project-card p {
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 1.2rem;
 }
 
-.btn-project.active {
-  display: inline-block;
-  padding: 0.6rem 1.6rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  color: white;
-  background: linear-gradient(to right, #6a4df4, #4a90e2);
-}
-
-.btn-project.disabled {
-  display: inline-block;
-  padding: 0.6rem 1.6rem;
-  border-radius: 25px;
-  font-weight: 500;
-  color: #9a8fbf;
-  background-color: #ece8f7;
-}
-
-/* ================= PROJETO INDIVIDUAL ================= */
-.project-content-wrapper {
-  background: url("bg-geral.jpg") center/cover no-repeat;
-  padding: 4rem 2rem;
-}
-
-.project-content {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 2.5rem;
-  border-radius: 18px;
-}
-
-.project-section-title {
-  color: #6a4df4;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-content p {
-  color: #444;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-.project-graph {
-  max-width: 100%;
-  border-radius: 14px;
-  margin-bottom: 2rem;
-}
-
-.project-details {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.detail-item {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.detail-title {
-  font-weight: 500;
-  color: #6a4df4;
-  font-size: 0.9rem;
-}
-
-.detail-info {
+.project-card a {
   font-size: 0.85rem;
-  color: #444;
+  text-decoration: none;
+  color: #1e1e1e;
+  border-bottom: 1px solid #1e1e1e;
 }
