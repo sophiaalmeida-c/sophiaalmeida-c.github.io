@@ -55,8 +55,8 @@ body {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.7rem 1.8rem;
-  background: #5a4fcf;
-  color: white;
+  background: url("bg-fundo.jpg") center/cover no-repeat
+    color: white;
   text-decoration: none;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -142,8 +142,7 @@ body {
 }
 
 .projects {
-  background: #ffffff;
-  padding: 5rem 2rem;
+  background:  url("geo-bg.jpg") center/cover no-repeat  padding: 5rem 2rem;
 }
 
 .projects-title {
