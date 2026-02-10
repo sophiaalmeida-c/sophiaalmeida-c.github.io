@@ -103,16 +103,11 @@ body {
   line-height: 1.5;
 }
 
-/* ============ FUNDO ROXO / AZUL ============ */
+/* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
-  background: linear-gradient(
-    135deg,
-    #6b63d9,
-    #8a7cff
-  );
+  background: url("bg-geral.jpg") center/cover no-repeat;
   padding: 4rem 2rem;
 }
-
 /* ================= CARDS ================= */
 .cards {
   display: flex;
