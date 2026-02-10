@@ -2,90 +2,60 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Sophia Almeida - Data Science Portfolio</title>
+  <title>Sophia Almeida – Data Science Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Fonte -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ================= HERO / INÍCIO ================= -->
+  <!-- HERO -->
   <section class="hero">
+    <div class="hero-content">
+      <h1>Sophia Almeida – Data Science Portfolio</h1>
+      <h2>Estudante de Ciência de Dados</h2>
+      <p>Usando e analisando dados públicos para um impacto social cada vez maior</p>
+      <a href="projects.html" class="btn-hero">Meus projetos</a>
+    </div>
 
-    <!-- imagem de fundo NY -->
-    <div class="hero-bg"></div>
+    <!-- imagem sobreposta -->
+    <img src="data-bg4.jpg" class="hero-overlay" alt="">
+  </section>
 
-    <!-- sobreposição roxa -->
-    <div class="hero-overlay"></div>
-
-    <!-- imagem geográfica sobreposta -->
-    <img src="data-bg4.jpg" alt="" class="geo-overlay">
-
-    <div class="hero-container">
-
-      <!-- TEXTOS -->
-      <div class="hero-content">
-        <h1>Sophia Almeida</h1>
-
-        <p class="hero-subtitle">
-          Estudante do ensino médio focando em Ciência de Dados.
-        </p>
-
-        <p class="hero-description">
-          Usando e analisando dados públicos para um impacto social cada vez maior
-        </p>
-
-        <a href="projects.html" class="hero-btn">
-          Meus projetos
-        </a>
-      </div>
-
-      <!-- QUADRADINHOS -->
-      <div class="hero-cards">
-
-        <div class="hero-card">
-          <img src="chart-no-axes-combined.svg" alt="">
-          <span>Análise de dados</span>
-        </div>
-
-        <div class="hero-card">
-          <img src="sparkles.svg" alt="">
-          <span>Desenvolvimento e liderança</span>
-        </div>
-
-        <div class="hero-card">
-          <img src="award.svg" alt="">
-          <span>Conquistas acadêmicas</span>
-        </div>
-
-      </div>
-
+  <!-- SOBRE MIM -->
+  <section class="about">
+    <div class="about-title">
+      <span></span>
+      <h3>Sobre mim</h3>
+      <span></span>
     </div>
   </section>
 
-  <!-- ================= SOBRE MIM ================= -->
-  <section class="about">
+  <!-- CARDS -->
+  <section class="cards-wrapper">
+    <section class="cards">
+      <div class="card">
+        <img src="icons/chart-no-axes-combined.svg">
+        <h3>Análise de Dados</h3>
+        <p>Estudos voltados à interpretação de dados educacionais e sociais.</p>
+      </div>
 
-    <div class="about-title">
-      <span class="line"></span>
-      <h2>Sobre mim</h2>
-      <span class="line"></span>
-    </div>
+      <div class="card">
+        <img src="icons/sparkles.svg">
+        <h3>Liderança e Iniciativa</h3>
+        <p>Projetos autorais com foco em impacto social e educacional.</p>
+      </div>
 
-    <p class="about-text">
-      Sou estudante de Ciência de Dados com interesse em projetos que unem
-      matemática, análise de dados e impacto social, com foco especial em
-      educação, desigualdade e oportunidades para mulheres.
-    </p>
-
+      <div class="card">
+        <img src="icons/award.svg">
+        <h3>Conquistas Acadêmicas</h3>
+        <p>Produção analítica baseada em dados públicos oficiais.</p>
+      </div>
+    </section>
   </section>
 
 </body>
