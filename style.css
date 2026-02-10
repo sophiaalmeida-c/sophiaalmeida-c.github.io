@@ -70,16 +70,18 @@ body {
   );
 }
 
-/* ================= SOBRE MIM ================= */
 .about {
+  padding: 2rem 1rem; /* espaço acima e abaixo do título */
   text-align: center;
+  background: none; /* garante que não tenha fundo */
 }
 
 .about-title {
   font-weight: 500;
-  color: #2b2b5f; /* cor do texto, igual aos outros títulos */
+  color: #2b2b5f; /* cor do texto */
   font-size: 1.2rem;
   letter-spacing: 1px;
+  margin: 0; /* remove qualquer margem extra */
 }
 /* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
