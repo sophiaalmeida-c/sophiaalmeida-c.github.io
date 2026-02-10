@@ -14,7 +14,7 @@ body {
 .hero {
   position: relative;
   height: 49vh;
-  background: url("ny-alterada.jpg") center/cover no-repeat;
+  background: url("ny-alterado.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
