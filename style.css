@@ -263,3 +263,58 @@ body {
   background-color: #f3e6fa; /* lilás claro */
   cursor: not-allowed;
 }
+/* ================= CONTEÚDO DO PROJETO ================= */
+.project-content-wrapper {
+  background: url("bg-geral.jpg") center/cover no-repeat;
+  padding: 4rem 2rem;
+}
+
+.project-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+.project-section-title {
+  color: #6b63d9; /* roxo */
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-content p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* DETALHES */
+.project-details {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.detail-icon {
+  width: 24px;
+}
+
+.detail-text .detail-title {
+  font-weight: 500;
+  color: #6b63d9; /* roxo */
+  font-size: 0.9rem;
+}
+
+.detail-text .detail-info {
+  font-size: 0.85rem;
+  color: #444;
+  display: block;
+}
