@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -13,36 +13,53 @@ body {
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  height: 49vh;
-  background: #f6f5f2;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(45, 27, 69, 0.65),
+    rgba(30, 20, 80, 0.45)
+  );
+  z-index: -1;
+}
+
 .hero-content {
-  position: relative;
-  z-index: 2;
   text-align: center;
-  max-width: 700px;
+  max-width: 720px;
   padding: 1rem;
+  color: white;
 }
 
 .hero h1 {
-  color: white;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   font-weight: 600;
 }
 
 .hero h2 {
-  color: #f6f5f2;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-top: 0.6rem;
 }
 
 .hero p {
-  color: #f6f5f2;
   font-size: 0.95rem;
   margin-top: 0.8rem;
 }
@@ -50,48 +67,37 @@ body {
 .btn-hero {
   display: inline-block;
   margin-top: 1.5rem;
-  padding: 0.7rem 1.8rem;
-  background: linear-gradient(to right, #f6f5f2, #6b6b6b); /* azul → azul escuro/roxo */
+  padding: 0.7rem 2rem;
+  background: linear-gradient(to right, #6a4df4, #4a90e2);
   color: white;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
-/* overlay SUAVE */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(60, 30, 120, 0.55),
-    rgba(30, 20, 80, 0.35)
-  );
-}
-
-
-/* ============ FUNDO DOS CARDS ================= */
+/* ================= CARDS ================= */
 .cards-wrapper {
-  background: #6b6b6b
+  background: #f4f3f8;
   padding: 4rem 2rem;
 }
-/* ================= CARDS ================= */
+
 .cards {
   display: flex;
   justify-content: center;
   gap: 2rem;
   max-width: 1100px;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 .card {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 2rem;
   width: 260px;
   text-align: center;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .card img {
@@ -102,75 +108,15 @@ body {
 .card h3 {
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
-  color: #2b2b5f;
+  color: #2d1b45;
+  font-weight: 500;
 }
 
 .card p {
   font-size: 0.9rem;
-  color: #444;
-}
-
-.projects {
-  background: #ffffff;
-  padding: 5rem 2rem;
-}
-
-.projects-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.projects-title h3 {
-  font-weight: 500;
-  color: #2d1b45;
-}
-
-.projects-title span {
-  width: 60px;
-  height: 1px;
-  background: rgba(45, 27, 69, 0.4);
-}
-
-.projects-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: #f7f5fb;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.project-card h4 {
-  color: #2d1b45;
-  margin-bottom: 0.5rem;
-}
-
-.project-card p {
   color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1.2rem;
 }
 
-.project-card a {
-  text-decoration: none;
-  color: #6a4df4;
-  font-weight: 500;
-}
 /* ================= HERO PROJETOS ================= */
 .projects-hero {
   position: relative;
@@ -183,17 +129,6 @@ body {
   overflow: hidden;
 }
 
-.projects-hero-content h1 {
-  font-size: 2.3rem;
-  font-weight: 600;
-}
-
-.projects-hero-content h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-top: 0.5rem;
-}
-
 .projects-hero-overlay {
   position: absolute;
   inset: 0;
@@ -201,10 +136,21 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-/* ================= QUADRINHOS DE PROJETOS ================= */
+.projects-hero-content h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.projects-hero-content h2 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* ================= PROJETOS GRID ================= */
 .projects-wrapper {
   background: url("bg-geral.jpg") center/cover no-repeat;
   padding: 4rem 2rem;
@@ -214,16 +160,16 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
 .project-box {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   padding: 2rem;
-  border-radius: 16px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .project-box img {
@@ -234,16 +180,15 @@ body {
 .project-box h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #2b2b5f;
+  color: #2d1b45;
 }
 
 .project-box p {
   font-size: 0.9rem;
-  color: #444;
-  margin-bottom: 1rem;
+  color: #555;
+  margin-bottom: 1.2rem;
 }
 
-/* BOTÕES */
 .btn-project.active {
   display: inline-block;
   padding: 0.6rem 1.6rem;
@@ -251,7 +196,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   color: white;
-  background: linear-gradient(to right, #4a90e2, #2b2b5f);
+  background: linear-gradient(to right, #6a4df4, #4a90e2);
 }
 
 .btn-project.disabled {
@@ -259,11 +204,11 @@ body {
   padding: 0.6rem 1.6rem;
   border-radius: 25px;
   font-weight: 500;
-  color: #b38ed7; /* lilás mais escuro */
-  background-color: #f3e6fa; /* lilás claro */
-  cursor: not-allowed;
+  color: #9a8fbf;
+  background-color: #ece8f7;
 }
-/* ================= CONTEÚDO DO PROJETO ================= */
+
+/* ================= PROJETO INDIVIDUAL ================= */
 .project-content-wrapper {
   background: url("bg-geral.jpg") center/cover no-repeat;
   padding: 4rem 2rem;
@@ -272,24 +217,29 @@ body {
 .project-content {
   max-width: 900px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 2.5rem;
-  border-radius: 16px;
+  border-radius: 18px;
 }
 
 .project-section-title {
-  color: #6b63d9; /* roxo */
+  color: #6a4df4;
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
 
 .project-content p {
   color: #444;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
-/* DETALHES */
+.project-graph {
+  max-width: 100%;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+}
+
 .project-details {
   display: flex;
   gap: 2rem;
@@ -299,31 +249,16 @@ body {
 
 .detail-item {
   display: flex;
-  align-items: center;
   gap: 0.8rem;
 }
 
-.detail-icon {
-  width: 24px;
-}
-
-.detail-text .detail-title {
+.detail-title {
   font-weight: 500;
-  color: #6b63d9; /* roxo */
+  color: #6a4df4;
   font-size: 0.9rem;
 }
 
-.detail-text .detail-info {
+.detail-info {
   font-size: 0.85rem;
   color: #444;
-  display: block;
-}
-
-.project-graph {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
