@@ -73,7 +73,7 @@ body {
 
 /* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
-  background: url("bg-geral.jpg") center/cover no-repeat;
+  background: #6b6b6b
   padding: 4rem 2rem;
 }
 /* ================= CARDS ================= */
