@@ -187,3 +187,17 @@ section {
     padding: 80px 7%;
   }
 }
+.hero,
+.hero h1,
+.hero p,
+.hero a {
+   color: #000000;
+}
+
+.hero a {
+   border-color: #000000;
+}
+. hero a:hover {
+   backgound-color: none;
+   color: #ffffff;
+}
