@@ -61,6 +61,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 0 12%;
+   min-height: 100vh;
 }
 
 /* título */
@@ -100,7 +101,8 @@ body {
 /* lado da imagem */
 .hero-image {
   position: relative;
-  background-image: url('ny-alterado.jpg');
+    min-height: 100vh;
+   background-image: url('ny-alterado.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -112,6 +114,7 @@ body {
   inset: 0;
   background-color: rgba(255, 255, 255, 0.25);
   pointer-events: none;
+  
 }
 
 /* =========================
