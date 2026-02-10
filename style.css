@@ -15,14 +15,13 @@
 }
 
 /* =========================
-   VARIÁVEIS GLOBAIS
+   VARIÁVEIS
 ========================= */
 
 :root {
-  --bg-main: #f6f6f4;          /* off-white */
-  --bg-soft: #ededeb;          /* cinza claro */
-  --text-main: #111111;        /* preto real */
-  --text-muted: #6b6b6b;       /* cinza texto */
+  --bg-main: #f6f6f4;      /* off-white */
+  --bg-soft: #eeeeec;
+  --text-main: #000000;   /* preto real */
   --border-light: #cfcfcf;
 }
 
@@ -49,37 +48,39 @@ body {
 }
 
 /* =========================
-   HERO (TOPO)
+   HERO
 ========================= */
 
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 90vh;
   background-image: url('./assets/img/ny-alterado.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 0 10%;
 }
 
-/* overlay claro */
+/* overlay claro (leve, pra imagem aparecer) */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(246, 246, 244, 0.78);
+  background-color: rgba(246, 246, 244, 0.65);
 }
 
-/* conteúdo do hero */
+/* conteúdo */
 .hero-content {
   position: relative;
-  max-width: 620px;
+  max-width: 700px;
 }
 
-/* título principal */
+/* título */
 .hero h1 {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -87,15 +88,15 @@ body {
 /* subtítulo */
 .hero p {
   font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 /* botão */
 .hero a {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 14px 36px;
   border: 1px solid var(--text-main);
+  border-radius: 40px;          /* arredondado */
   text-decoration: none;
   color: var(--text-main);
   font-size: 0.95rem;
@@ -121,12 +122,12 @@ section {
 
 .section-title {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   font-size: 0.85rem;
   letter-spacing: 2px;
   text-transform: lowercase;
-  color: var(--text-muted);
   margin-bottom: 40px;
 }
 
@@ -139,13 +140,14 @@ section {
 }
 
 /* =========================
-   SOBRE MIM
+   SOBRE
 ========================= */
 
 .about {
   max-width: 720px;
+  margin: 0 auto;
   font-size: 1rem;
-  color: var(--text-main);
+  text-align: center;
 }
 
 /* =========================
@@ -163,7 +165,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(246, 246, 244, 0.88);
+  background-color: rgba(246, 246, 244, 0.85);
 }
 
 .visual-bg > * {
@@ -176,12 +178,8 @@ section {
 
 @media (max-width: 768px) {
 
-  .hero {
-    padding: 0 7%;
-  }
-
   .hero h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
 
   section {
