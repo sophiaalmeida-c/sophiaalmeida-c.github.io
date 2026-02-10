@@ -47,13 +47,10 @@ body {
    HERO 50/50 VERTICAL
 ========================= */
 
-/* =========================
-   HERO 50/50 VERTICAL
-========================= */
-
 .hero {
   height: 100vh;
-  background-color: #f5f5f5;
+  background-color: transparent;
+   padding: 0;
 }
 
 .hero-image {
@@ -70,6 +67,7 @@ body {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+   margin-top: 0;
 }
 
 /* overlay leve */
