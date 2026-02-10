@@ -1,3 +1,7 @@
+/* =========================
+   FONTE
+========================= */
+
 @font-face {
   font-family: 'Libre Baskerville';
   src: url('./assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
@@ -10,11 +14,21 @@
   font-weight: 700;
 }
 
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
+
 :root {
-  --bg-light: #f5f5f3;
-  --text-main: #111;
-  --text-muted: #666;
+  --bg-main: #f6f6f4;          /* off-white */
+  --bg-soft: #ededeb;          /* cinza claro */
+  --text-main: #111111;        /* preto real */
+  --text-muted: #6b6b6b;       /* cinza texto */
+  --border-light: #cfcfcf;
 }
+
+/* =========================
+   RESET
+========================= */
 
 * {
   margin: 0;
@@ -22,121 +36,155 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   BODY
+========================= */
+
 body {
   font-family: 'Libre Baskerville', serif;
-  background-color: var(--bg-light);
+  background-color: var(--bg-main);
   color: var(--text-main);
-  line-height: 1.7;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* HERO */
+/* =========================
+   HERO (TOPO)
+========================= */
 
 .hero {
   position: relative;
+  min-height: 85vh;
   background-image: url('./assets/img/ny-alterado.jpg');
   background-size: cover;
   background-position: center;
-  padding: 120px 10%;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
 }
 
+/* overlay claro */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(245, 245, 243, 0.75);
+  background-color: rgba(246, 246, 244, 0.78);
 }
 
+/* conteúdo do hero */
 .hero-content {
   position: relative;
-  max-width: 600px;
+  max-width: 620px;
 }
 
+/* título principal */
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
+  margin-bottom: 25px;
 }
 
+/* subtítulo */
 .hero p {
-  margin-top: 20px;
   font-size: 1.1rem;
   color: var(--text-muted);
+  margin-bottom: 40px;
 }
 
+/* botão */
 .hero a {
   display: inline-block;
-  margin-top: 35px;
+  padding: 12px 32px;
+  border: 1px solid var(--text-main);
   text-decoration: none;
   color: var(--text-main);
-  border: 1px solid var(--text-main);
-  padding: 12px 28px;
-  transition: 0.3s;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
 .hero a:hover {
   background-color: var(--text-main);
-  color: var(--bg-light);
+  color: var(--bg-main);
 }
 
-/* SECTION PADRÃO */
+/* =========================
+   SEÇÕES
+========================= */
 
 section {
-  padding: 90px 10%;
+  padding: 100px 10%;
 }
 
-/* SOBRE */
+/* =========================
+   TÍTULO DE SEÇÃO
+========================= */
 
 .section-title {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 0.9rem;
+  gap: 16px;
+  font-size: 0.85rem;
   letter-spacing: 2px;
+  text-transform: lowercase;
   color: var(--text-muted);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .section-title::before,
 .section-title::after {
   content: "";
   height: 1px;
-  width: 30px;
-  background-color: var(--text-muted);
+  width: 32px;
+  background-color: var(--border-light);
 }
+
+/* =========================
+   SOBRE MIM
+========================= */
 
 .about {
-  max-width: 700px;
+  max-width: 720px;
+  font-size: 1rem;
+  color: var(--text-main);
 }
 
-/* FUNDO GEOMÉTRICO */
+/* =========================
+   FUNDO VISUAL SECUNDÁRIO
+========================= */
 
-.bg-visual {
+.visual-bg {
+  position: relative;
   background-image: url('./assets/img/bg-alterado.jpg');
   background-size: cover;
   background-position: center;
-  padding: 120px 10%;
 }
 
-.bg-visual::after {
+.visual-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(245, 245, 243, 0.85);
+  background-color: rgba(246, 246, 244, 0.88);
 }
 
-/* PROJETOS */
-
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.visual-bg > * {
+  position: relative;
 }
 
-.project-card a {
-  text-decoration: none;
-  color: var(--text-main);
-  font-size: 1.3rem;
-}
+/* =========================
+   RESPONSIVO
+========================= */
 
-.project-card a:hover {
-  text-decoration: underline;
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 0 7%;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  section {
+    padding: 80px 7%;
+  }
 }
