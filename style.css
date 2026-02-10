@@ -72,18 +72,15 @@ body {
 
 /* ================= SOBRE MIM ================= */
 .about {
-  background: url("bg-geral.jpg") center/cover no-repeat;
-  height: 180px; /* altura da seção, ajusta se quiser mais ou menos */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem 1rem; /* espaço acima e abaixo do título */
+  text-align: center;
 }
 
 .about-title {
   font-weight: 500;
-  color: #ffffff; /* texto branco sobre a imagem */
+  color: #2b2b5f; /* cor do texto, igual aos outros títulos */
   font-size: 1.2rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 /* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
