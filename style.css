@@ -19,10 +19,8 @@
 ========================= */
 
 :root {
-  --bg-main: #f5f5f5;      /* off-white */
-  --bg-soft: #eeeeec;
-  --text-main: #000;   /* preto real */
-  --border-light: #000;
+  --bg-main: #f5f5f5;
+  --text-main: #000;
 }
 
 /* =========================
@@ -40,72 +38,80 @@
 ========================= */
 
 body {
-  color: #000;
-  background-color: #f5f5f5; /* off white */
   font-family: 'Libre Baskerville', serif;
-}/* =========================
-   HERO
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* =========================
+   HERO (DIVIDIDO EM 2)
 ========================= */
 
 .hero {
-  position: relative;
-  min-height: 90vh;
-  background-image: url('ny-alterado.jpg');
-  background-size: cover;
-  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* lado do texto */
+.hero-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 10%;
-}
-
-/* overlay claro (leve, pra imagem aparecer) */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.1);
-   z-index: 1;
-}
-
-/* conteúdo */
-.hero-content {
-  position: relative;
-  max-width: 700px;
+  padding: 0 12%;
 }
 
 /* título */
 .hero h1 {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin-bottom: 25px;
-   color: #000000;
+  margin-bottom: 24px;
+  color: #000;
 }
 
 /* subtítulo */
 .hero p {
   font-size: 1.1rem;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
+  color: #000;
 }
 
 /* botão */
-
 .hero .btn {
-  background-color: #f5f5f5; /* off white sólido */
+  background-color: #f5f5f5;
   color: #000;
   border: 2px solid #000;
   border-radius: 999px;
-  padding: 12px 32px;
+  padding: 14px 36px;
   font-weight: 700;
   text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  opacity: 1;
-   
-}.hero a:hover {
-  background-color: var(--text-main);
-  color: var(--bg-main);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.hero .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* lado da imagem */
+.hero-image {
+  position: relative;
+  background-image: url('ny-alterado.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay leve só na imagem */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
 }
 
 /* =========================
@@ -136,7 +142,7 @@ section {
   content: "";
   height: 1px;
   width: 32px;
-  background-color: var(--border-light);
+  background-color: #000;
 }
 
 /* =========================
@@ -146,82 +152,28 @@ section {
 .about {
   max-width: 720px;
   margin: 0 auto;
-  font-size: 1rem;
   text-align: center;
-}
-
-/* =========================
-   FUNDO VISUAL SECUNDÁRIO
-========================= */
-
-.visual-bg {
-  position: relative;
-  background-image: url('bg-alterado.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.visual-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(246, 246, 244, 0.85);
-}
-
-.visual-bg > * {
-  position: relative;
+  font-size: 1rem;
 }
 
 /* =========================
    RESPONSIVO
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 50vh;
+  }
+
+  .hero-content {
+    padding: 80px 8%;
+  }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-
-  section {
-    padding: 80px 7%;
-  }
-}
-.hero,
-.hero h1,
-.hero p,
-.hero a {
-   color: #000000;
-}
-
-.hero a {
-   border-color: #000000;
-}
-. hero a:hover {
-   backgound-color: none;
-   color: #ffffff;
-}
-body,
-section,
-.about,
-.section-title {
-  color: #000000;
-}
-.hero .bnt{
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-
-  background-color: #f5f5f5;
-  color: #000;
-
-  padding: 14px 36px;
-  border-radius: 999px;
-
-  border: 2px solid #000;
-  text-decoration: none;
-
-  font-weight: 700;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
-
-  opacity: 1;
 }
