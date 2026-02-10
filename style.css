@@ -1,17 +1,21 @@
-/* ================= FONTES ================= */
 @font-face {
-  font-family: "Libre Baskerville";
-  src: url("fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-family: 'Libre Baskerville';
+  src: url('./assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Libre Baskerville";
-  src: url("fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-family: 'Libre Baskerville';
+  src: url('./assets/fonts/LibreBaskerville-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 
-/* ================= RESET ================= */
+:root {
+  --bg-light: #f5f5f3;
+  --text-main: #111;
+  --text-muted: #666;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,110 +23,120 @@
 }
 
 body {
-  font-family: "Libre Baskerville", serif;
-  background-color: #f5f4f2; /* off white */
-  color: #1e1e1e;
-  line-height: 1.6;
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.7;
 }
 
-/* ================= HERO ================= */
+/* HERO */
+
 .hero {
   position: relative;
-  height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url("bg-alterado.jpg") center/cover no-repeat;
+  background-image: url('./assets/img/ny-alterado.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 10%;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.78); /* véu branco */
+  background: rgba(245, 245, 243, 0.75);
 }
 
 .hero-content {
   position: relative;
-  max-width: 800px;
-  padding: 2rem;
+  max-width: 600px;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
-.hero h2 {
+.hero p {
+  margin-top: 20px;
   font-size: 1.1rem;
-  font-weight: 400;
-  margin-top: 0.8rem;
-  color: #444;
+  color: var(--text-muted);
 }
 
-/* ================= SEÇÕES ================= */
-.section {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+.hero a {
+  display: inline-block;
+  margin-top: 35px;
+  text-decoration: none;
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+  padding: 12px 28px;
+  transition: 0.3s;
 }
 
-/* ---- título tipo - sobre mim - ---- */
+.hero a:hover {
+  background-color: var(--text-main);
+  color: var(--bg-light);
+}
+
+/* SECTION PADRÃO */
+
+section {
+  padding: 90px 10%;
+}
+
+/* SOBRE */
+
 .section-title {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #6b6b6b;
-  margin-bottom: 1.8rem;
+  gap: 14px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
 }
 
 .section-title::before,
 .section-title::after {
   content: "";
-  flex: 1;
   height: 1px;
-  background: #cfcfcf;
+  width: 30px;
+  background-color: var(--text-muted);
 }
 
-/* ================= TEXTO ================= */
-.section p {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 1rem;
+.about {
+  max-width: 700px;
 }
 
-/* ================= PROJETOS ================= */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+/* FUNDO GEOMÉTRICO */
+
+.bg-visual {
+  background-image: url('./assets/img/bg-alterado.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 10%;
 }
 
-.project-card {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 14px;
-  border: 1px solid #e5e5e5;
+.bg-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 245, 243, 0.85);
 }
 
-.project-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
-}
+/* PROJETOS */
 
-.project-card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 1.2rem;
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .project-card a {
-  font-size: 0.85rem;
   text-decoration: none;
-  color: #1e1e1e;
-  border-bottom: 1px solid #1e1e1e;
+  color: var(--text-main);
+  font-size: 1.3rem;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
 }
