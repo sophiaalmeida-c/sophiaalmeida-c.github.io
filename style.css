@@ -71,9 +71,20 @@ body {
 }
 
 /* ================= SOBRE MIM ================= */
-<section class="about">
-  <h3 class="about-title">- Sobre mim -</h3>
-</section>
+.about {
+  background: url("bg-geral.jpg") center/cover no-repeat;
+  height: 180px; /* altura da seção, ajusta se quiser mais ou menos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-title {
+  font-weight: 500;
+  color: #ffffff; /* texto branco sobre a imagem */
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
 /* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
   background: url("bg-geral.jpg") center/cover no-repeat;
