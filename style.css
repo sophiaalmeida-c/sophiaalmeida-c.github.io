@@ -1,208 +1,142 @@
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-html, body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #2f1c4f;
-  color: #ffffff;
+body {
+  background: #ffffff;
+  color: #222;
 }
 
-/* =========================
-   HERO / INÍCIO
-========================= */
+/* ================= HERO ================= */
 .hero {
-  position: relative;
   height: 49vh;
-  background-image: url("ny-hero.jpg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(90, 80, 170, 0.45),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("ny-hero.jpg") center/cover no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-/* overlay roxo SUAVE */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(70, 40, 120, 0.45),
-    rgba(30, 20, 80, 0.35)
-  );
-}
-
-/* conteúdo do hero */
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-left: 8%;
-  max-width: 600px;
+  text-align: center;
+  max-width: 700px;
+  padding: 1rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 600;
 }
 
 .hero h2 {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  font-weight: 500;
+  color: #eae6ff;
+  font-weight: 400;
+  margin-top: 0.6rem;
 }
 
 .hero p {
-  margin-top: 0.7rem;
+  color: #f2f2f2;
   font-size: 0.95rem;
-  opacity: 0.9;
+  margin-top: 0.8rem;
 }
 
-/* botão principal */
-.btn-primary {
+.btn-hero {
   display: inline-block;
-  margin-top: 1.2rem;
-  padding: 12px 24px;
-  background: linear-gradient(90deg, #7a4cff, #5b3bff);
-  color: #ffffff;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.8rem;
+  background: #5a4fcf;
+  color: white;
   text-decoration: none;
-  border-radius: 10px;
-  font-weight: 500;
+  border-radius: 25px;
+  font-size: 0.9rem;
 }
 
-/* =========================
-   IMAGEM GEOGRÁFICA
-========================= */
-.geo-overlay {
+/* imagem sobreposta */
+.hero-overlay {
   position: absolute;
-  left: 0;
-  bottom: -10%;
-  width: 30%;
-  opacity: 0.3;
-  mix-blend-mode: screen;
-  z-index: 3;
-}
-
-.geo-overlay img {
-  width: 100%;
-}
-
-/* =========================
-   SOBRE MIM
-========================= */
-.about {
-  background-color: #3a2266;
-  padding: 90px 8% 70px;
-}
-
-/* título com linhas */
-.section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-title span {
-  position: relative;
-  font-size: 1.4rem;
-  padding: 0 20px;
-}
-
-.section-title span::before,
-.
-/* =========================
-   PROJETOS — SEÇÃO PRINCIPAL
-========================= */
-
-/* fundo geral da seção de projetos */
-.projects-section {
-  background-color: #3a2266;
-  padding: 90px 8% 80px;
-}
-
-/* título "Projetos" (caso use fora do hero) */
-.projects-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.projects-title h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.projects-title p {
-  margin-top: 10px;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-/* =========================
-   QUADRINHOS DE PROJETOS
-========================= */
-.projects-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-}
-
-/* cada projeto */
-.project-card {
-  background-color: #ffffff;
-  color: #2a2a2a;
-  border-radius: 18px;
-  padding: 30px 26px;
-  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.project-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 12px;
-}
-
-.project-card p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  left: -40px;
+  bottom: -30px;
+  width: 280px;
   opacity: 0.85;
+  z-index: 1;
 }
 
-/* =========================
-   BOTÕES DOS PROJETOS
-========================= */
+/* ================= SOBRE MIM ================= */
+.about {
+  background: white;
+  padding: 3rem 2rem 1.5rem;
+}
 
-/* botão ativo */
-.project-btn {
-  margin-top: 20px;
-  padding: 12px 22px;
-  border-radius: 12px;
-  font-size: 0.9rem;
+.about-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about-title h3 {
   font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  width: fit-content;
+  color: #2b2b5f;
 }
 
-/* ver projeto */
-.project-btn.active {
+.about-title span {
+  width: 60px;
+  height: 1px;
+  background: #ccc;
+}
+
+/* ============ FUNDO ROXO / AZUL ============ */
+.cards-wrapper {
   background: linear-gradient(
-    90deg,
-    #4da3ff,
-    #4b2fff
+    135deg,
+    #6b63d9,
+    #8a7cff
   );
-  color: #ffffff;
+  padding: 4rem 2rem;
 }
 
-/* em desenvolvimento */
-.project-btn.disabled {
-  background-color: #e6d9ff;
-  color: #6a3dbf;
-  cursor: not-allowed;
+/* ================= CARDS ================= */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.card img {
+  width: 36px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #2b2b5f;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #444;
 }
