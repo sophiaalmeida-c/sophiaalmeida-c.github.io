@@ -72,17 +72,12 @@ body {
 
 /* ================= SOBRE MIM ================= */
 .about {
-  background: url("bg-geral.jpg") center/cover no-repeat;
-  padding: 4rem 2rem;  /* mesmo padding dos cards para uniformidade */
   text-align: center;
   color: #222; /* mantém a cor do texto escura sobre a imagem */
 }
 
 .about-text {
-  max-width: 700px;
-  margin: 1rem auto 0 auto;
   font-size: 0.95rem;
-  line-height: 1.5;
 }
 /* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
