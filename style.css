@@ -71,14 +71,9 @@ body {
 }
 
 /* ================= SOBRE MIM ================= */
-.about {
-  text-align: center;
-  color: #222; /* mantém a cor do texto escura sobre a imagem */
-}
-
-.about-text {
-  font-size: 0.95rem;
-}
+<section class="about">
+  <h3 class="about-title">- Sobre mim -</h3>
+</section>
 /* ============ FUNDO DOS CARDS ================= */
 .cards-wrapper {
   background: url("bg-geral.jpg") center/cover no-repeat;
