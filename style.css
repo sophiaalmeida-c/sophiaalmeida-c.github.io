@@ -54,7 +54,7 @@ body {
 .hero {
   position: relative;
   min-height: 90vh;
-  background-image: url('./assets/img/ny-alterado.jpg');
+  background-image: url('ny-alterado.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -83,6 +83,7 @@ body {
   font-size: 3.4rem;
   font-weight: 700;
   margin-bottom: 25px;
+   color: #000000;
 }
 
 /* subtítulo */
