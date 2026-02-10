@@ -68,6 +68,7 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
    margin-top: 0;
+  min-height: calc(50vh + 120px);
 }
 
 /* overlay leve */
@@ -158,10 +159,11 @@ section {
 ========================= */
 
 .about {
-  max-width: 50px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
   font-size: 1rem;
+  margin-top: 0px;
 }
 
 /* =========================
