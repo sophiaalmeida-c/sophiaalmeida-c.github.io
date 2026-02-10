@@ -318,3 +318,12 @@ body {
   color: #444;
   display: block;
 }
+
+.project-graph {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
