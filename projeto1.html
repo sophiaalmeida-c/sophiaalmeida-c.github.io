@@ -1,19 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Projeto 01</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <section>
-    <div class="section-title">projeto</div>
-    <h1>Projeto 01</h1>
-    <p>
-      Descrição detalhada do projeto, objetivos, processo e aprendizados.
-    </p>
-  </section>
-
-</body>
+<!DOCTYPE html> 
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desigualdade Educacional no Brasil – Projeto 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head> 
+  <body>
+    <!-- HERO DO PROJETO -->
+    <section class="projects-hero">
+      <div class="projects-hero-content">
+        <h1>Desigualdade Educacional no Brasil</h1>
+        <h2>Análise da relação entre renda média estadual nos anos finais</h2>
+      </div>
+      <img src="geo-bg.jpg"
+        class="projects-hero-overlay"
+        alt="Fundo geográfico">
+    </section>
+    <!-- CONTEÚDO DO PROJETO -->
+    <section class="project-content-wrapper">
+      <div class="project-content">
+        <!-- GRÁFICO -->
+        <img src="ideb_estados.png"
+          alt="Gráfico IDEB por estado"
+          class="project-graph">
+        <!-- VISÃO GERAL --> 
+        <h3 class="project-section-title">Visão geral</h3>
+        <p> Neste projeto, analisei os dados do IDEB dos anos finais do ensino fundamental por estado brasileiro no ano de 2019. Os valores foram organizados em uma planilha e ordenados do menor para o maior índice, permitindo uma visualização clara das diferenças de desempenho educacional entre as unidades federativas. </p>
+        <p> Ao observar o gráfico, percebe-se que os estados com menores índices de IDEB concentram-se nas regiões Norte e Nordeste do país. Diferentemente dos estados na região Sul, Sudeste e parte do Centro-Oeste, que se encontram em maiores índices, indicando maior desempenho educacional médio nessas áreas. </p> <p> Essa diferença evidencia a desigualdade regional na qualidade da educação básica no Brasil, possivelmente relacionada a fatores socioeconômicos, investimento público, infraestrutura escolar e acesso a recursos educacionais. A análise reforça a importância de políticas públicas voltadas à redução dessas desigualdades. </p> 
+        <p> Os dados apresentados são de 2019 porque, após esse ano, o IDEB sofreu atrasos devido à pandemia de COVID-19. Por isso, 2019 é o último ano com informações oficiais completas por região, garantindo uma análise confiável e comparável do desempenho escolar no Brasil. </p> 
+        <!-- DETALHES --> 
+        <div class="project-details"> 
+          <div class="detail-item"> 
+            <img src="calendar.svg"
+              alt="Calendário" 
+              class="detail-icon"> 
+            <div class="detail-text"> 
+              <span class="detail-title">Período</span>
+              <span class="detail-info">jan/2019 - dez/2019</span>
+            </div>
+          </div>
+          <div class="detail-item"> 
+            <div class="detail-text"> 
+              <span class="detail-title">Fontes</span>
+              <span class="detail-info">IBGE e INEP
+              </span> 
+            </div> 
+          </div>
+        </div> 
+      </div> 
+    </section>
+  </body> 
 </html>
