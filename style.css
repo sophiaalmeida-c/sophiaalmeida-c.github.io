@@ -50,7 +50,9 @@ body {
 .hero {
   height: 100vh;
   background-color: transparent;
+    min-height: 0;
    padding: 0;
+   margin: 0;
 }
 
 .hero-image {
@@ -68,7 +70,7 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
    margin-top: 0;
-  min-height: calc(50vh + 120px);
+  margin-bottom: 0;
 }
 
 /* overlay leve */
