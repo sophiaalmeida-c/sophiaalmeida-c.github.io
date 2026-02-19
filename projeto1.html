@@ -1,53 +1,166 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Desigualdade Educacional no Brasil – Projeto 1</title>
-    <link rel="stylesheet" href="style.css" />
-  </head> 
-  <body>
-    <!-- HERO DO PROJETO -->
-    <section class="projects-hero">
-      <div class="projects-hero-content">
-        <h1>Desigualdade Educacional no Brasil</h1>
-        <h2>Análise da relação entre renda média estadual nos anos finais</h2>
-      </div>
-      <img src="bg-alterado.jpg"
-        class="projects-hero-overlay"
-        alt="Fundo geográfico">
-    </section>
-    <!-- CONTEÚDO DO PROJETO -->
-    <section class="project-content-wrapper">
-      <div class="project-content">
-        <!-- GRÁFICO -->
-        <img src="ideb_estados.png"
-          alt="Gráfico IDEB por estado"
-          class="project-graph">
-        <!-- VISÃO GERAL --> 
-        <h3 class="project-section-title">Visão geral</h3>
-        <p> Neste projeto, analisei os dados do IDEB dos anos finais do ensino fundamental por estado brasileiro no ano de 2019. Os valores foram organizados em uma planilha e ordenados do menor para o maior índice, permitindo uma visualização clara das diferenças de desempenho educacional entre as unidades federativas. </p>
-        <p> Ao observar o gráfico, percebe-se que os estados com menores índices de IDEB concentram-se nas regiões Norte e Nordeste do país. Diferentemente dos estados na região Sul, Sudeste e parte do Centro-Oeste, que se encontram em maiores índices, indicando maior desempenho educacional médio nessas áreas. </p> <p> Essa diferença evidencia a desigualdade regional na qualidade da educação básica no Brasil, possivelmente relacionada a fatores socioeconômicos, investimento público, infraestrutura escolar e acesso a recursos educacionais. A análise reforça a importância de políticas públicas voltadas à redução dessas desigualdades. </p> 
-        <p> Os dados apresentados são de 2019 porque, após esse ano, o IDEB sofreu atrasos devido à pandemia de COVID-19. Por isso, 2019 é o último ano com informações oficiais completas por região, garantindo uma análise confiável e comparável do desempenho escolar no Brasil. </p> 
-        <!-- DETALHES --> 
-        <div class="project-details"> 
-          <div class="detail-item"> 
-            <img src="calendar.svg"
-              alt="Calendário" 
-              class="detail-icon"> 
-            <div class="detail-text"> 
-              <span class="detail-title">Período</span>
-              <span class="detail-info">jan/2019 - dez/2019</span>
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto 1 | IDEB e Renda Média</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte (use a mesma do site principal, se já houver) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS principal do site (se existir) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS específico do projeto -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f7f9fc;
+            margin: 0;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .project-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0f172a; /* azul marinho quase preto */
+            margin-bottom: 12px;
+        }
+
+        .project-header p {
+            font-size: 15px;
+            color: #4b5563;
+            max-width: 800px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1e3a8a;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #374151;
+        }
+
+        .graph img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .side-card {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .icon.blue { background: #e0ecff; color: #2563eb; }
+        .icon.orange { background: #fdebd3; color: #d97706; }
+        .icon.purple { background: #ede9fe; color: #7c3aed; }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- CABEÇALHO DO PROJETO -->
+        <div class="project-header">
+            <h1>Análise da relação entre renda média e o IDEB nos anos finais do ensino fundamental (2019)</h1>
+            <p>
+                Este projeto investiga a relação entre a renda média dos estados brasileiros e os resultados do IDEB
+                nos anos finais do ensino fundamental, utilizando dados públicos referentes ao ano de 2019.
+            </p>
+        </div>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="grid">
+
+            <!-- GRÁFICO -->
+            <div class="card graph">
+                <h2>Visualização dos Dados</h2>
+                <img src="ideb_estados.png" alt="Gráfico IDEB e renda média por estado">
             </div>
-          </div>
-          <div class="detail-item"> 
-            <div class="detail-text"> 
-              <span class="detail-title">Fontes</span>
-              <span class="detail-info">IBGE e INEP
-              </span> 
-            </div> 
-          </div>
-        </div> 
-      </div> 
-    </section>
-  </body> 
+
+            <!-- COLUNA LATERAL -->
+            <div>
+
+                <div class="card side-card">
+                    <div class="icon blue">🔍</div>
+                    <div>
+                        <h2>Contexto da Análise</h2>
+                        <p>
+                            Análise baseada em dados do IDEB e da renda média estadual referentes aos anos finais
+                            do ensino fundamental em 2019.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card side-card">
+                    <div class="icon orange">💡</div>
+                    <div>
+                        <h2>Achados Preliminares</h2>
+                        <p>
+                            Observa-se uma correlação positiva entre renda média estadual e desempenho no IDEB,
+                            indicando possíveis desigualdades educacionais associadas a fatores socioeconômicos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card side-card">
+                    <div class="icon purple">📄</div>
+                    <div>
+                        <h2>Observações & Limitações</h2>
+                        <p>
+                            A análise é exploratória e não controla outras variáveis relevantes, como investimentos
+                            educacionais, políticas públicas ou infraestrutura escolar.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
 </html>
