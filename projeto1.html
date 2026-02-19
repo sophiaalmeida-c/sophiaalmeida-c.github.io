@@ -5,10 +5,10 @@
     <title>Projeto 1 | IDEB e Renda Média</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonte (use a mesma do site principal, se já houver) -->
+    <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- CSS principal do site (se existir) -->
+    <!-- CSS principal do site -->
     <link rel="stylesheet" href="style.css">
 
     <!-- CSS específico do projeto -->
@@ -101,66 +101,88 @@
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- CABEÇALHO DO PROJETO -->
-        <div class="project-header">
-            <h1>Análise da relação entre renda média e o IDEB nos anos finais do ensino fundamental (2019)</h1>
-            <p>
-                Este projeto investiga a relação entre a renda média dos estados brasileiros e os resultados do IDEB
-                nos anos finais do ensino fundamental, utilizando dados públicos referentes ao ano de 2019.
-            </p>
-        </div>
-
-        <!-- CONTEÚDO PRINCIPAL -->
-        <div class="grid">
-
-            <!-- GRÁFICO -->
-            <div class="card graph">
-                <h2>Visualização dos Dados</h2>
-                <img src="ideb_estados.png" alt="Gráfico IDEB e renda média por estado">
-            </div>
-
-            <!-- COLUNA LATERAL -->
-            <div>
-
-                <div class="card side-card">
-                    <div class="icon blue">🔍</div>
-                    <div>
-                        <h2>Contexto da Análise</h2>
-                        <p>
-                            Análise baseada em dados do IDEB e da renda média estadual referentes aos anos finais
-                            do ensino fundamental em 2019.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card side-card">
-                    <div class="icon orange">💡</div>
-                    <div>
-                        <h2>Achados Preliminares</h2>
-                        <p>
-                            Observa-se uma correlação positiva entre renda média estadual e desempenho no IDEB,
-                            indicando possíveis desigualdades educacionais associadas a fatores socioeconômicos.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card side-card">
-                    <div class="icon purple">📄</div>
-                    <div>
-                        <h2>Observações & Limitações</h2>
-                        <p>
-                            A análise é exploratória e não controla outras variáveis relevantes, como investimentos
-                            educacionais, políticas públicas ou infraestrutura escolar.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+    <!-- CABEÇALHO -->
+    <div class="project-header">
+        <h1>Análise da relação entre renda média e o IDEB nos anos finais do ensino fundamental (2019)</h1>
+        <p>
+            Este projeto investiga a relação entre a renda média domiciliar per capita dos estados brasileiros
+            e os resultados do IDEB nos anos finais do ensino fundamental, com base em dados públicos do INEP e do IBGE
+            referentes ao ano de 2019.
+        </p>
     </div>
+
+    <!-- CONTEÚDO -->
+    <div class="grid">
+
+        <!-- COLUNA PRINCIPAL (GRÁFICOS) -->
+        <div>
+
+            <!-- GRÁFICO 1 — BARRAS -->
+            <div class="card graph">
+                <h2>IDEB por estado (anos finais, 2019)</h2>
+                <img src="ideb_estados.png" alt="Gráfico de barras do IDEB por estado em 2019">
+                <p style="font-size:13px; color:#4b5563; margin-top:10px;">
+                    O gráfico apresenta a distribuição do IDEB entre os estados brasileiros, evidenciando
+                    desigualdades regionais no desempenho educacional.
+                </p>
+            </div>
+
+            <!-- GRÁFICO 2 — DISPERSÃO -->
+            <div class="card graph" style="margin-top:32px;">
+                <h2>Relação entre renda média estadual e IDEB</h2>
+                <img src="rendamedia-ideb.png" alt="Gráfico de dispersão entre renda média e IDEB por estado">
+                <p style="font-size:13px; color:#4b5563; margin-top:10px;">
+                    Cada ponto representa uma unidade federativa. Observa-se uma tendência positiva entre renda média
+                    estadual e IDEB, embora com dispersão significativa, indicando que a renda não é o único fator
+                    associado ao desempenho educacional.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLUNA LATERAL -->
+        <div>
+
+            <div class="card side-card">
+                <div class="icon blue">🔍</div>
+                <div>
+                    <h2>Contexto da Análise</h2>
+                    <p>
+                        A análise utiliza dados do IDEB (INEP) e da renda média domiciliar per capita (IBGE – PNAD Contínua),
+                        considerando exclusivamente os anos finais do ensino fundamental no ano de 2019.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card side-card">
+                <div class="icon orange">💡</div>
+                <div>
+                    <h2>Achados Preliminares</h2>
+                    <p>
+                        Observa-se uma tendência positiva entre renda média estadual e desempenho no IDEB, embora existam
+                        exceções, sugerindo a influência de múltiplos fatores socioeconômicos e educacionais.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card side-card">
+                <div class="icon purple">📄</div>
+                <div>
+                    <h2>Observações & Limitações</h2>
+                    <p>
+                        Trata-se de uma análise exploratória, que não controla outras variáveis relevantes, como
+                        investimentos educacionais, políticas públicas, infraestrutura escolar ou características
+                        demográficas dos estados.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
