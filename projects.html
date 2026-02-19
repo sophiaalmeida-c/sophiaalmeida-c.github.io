@@ -1,47 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> 
-  <head> 
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
-    <title>Projetos | Sophia Almeida</title> 
+    <title>Sophia Almeida - Data Science Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal (o mesmo da home) -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-      rel="stylesheet">
-  </head> 
-  <body> 
-    <!-- HERO PROJETOS --> 
-    <section class="projects-hero">
-      <div class="projects-hero-content">
-        <h1>PROJETOS</h1>
-        <h2>Aqui você pode ver as pesquisas em que trabalhei.</h2>
-      </div>
-      <img src="bg-alterado.jpg"
-        class="projects-hero-overlay" alt="Fundo geográfico">
+
+    <!-- CSS específico dos projetos -->
+    <link rel="stylesheet" href="projects.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Meu Portfólio Acadêmico</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projects.html" class="active">Meus Projetos</a>
+            <a href="#">Registro de Desenvolvimento</a>
+            <a href="#">Metodologia Geral</a>
+        </nav>
+    </header>
+
+    <!-- HEADER DA PÁGINA -->
+    <section class="projects-header">
+        <h1>Meus Projetos</h1>
+        <p>
+            Uma seleção dos meus principais projetos acadêmicos e pesquisas desenvolvidas durante o ensino médio.
+        </p>
     </section>
-    <!-- QUADRINHOS DE PROJETOS -->
-    <section class="projects-wrapper"> 
-      <div class="projects-grid">
-        <!-- Projeto 1 --> 
-        <div class="project-box">
-          <img src="chart-no-axes-combined.svg" alt="Gráfico">
-          <h3>Desigualdade Educacional no Brasil</h3>
-          <p>Analise da relação entre a renda média estadual e o IDEB anual (2019). Utilizando Google Sheets e os dados do IBGE e INEP</p> 
-          <a href="projeto1.html" class="btn-project active">Ver projeto</a>
-        </div> 
-        <!-- Projeto 2 --> 
-        <div class="project-box"> 
-          <img src="search.svg" alt="Lupa"> 
-          <h3>Educação, Renda e Oportunidades</h3>
-          <p>Estudo de indicadores sociais relacionados a oportunidades. A tecnologia ajuda ou atrapalha? Utilizando Google Sheets, Python e dados públicos.</p>
-          <span class="btn-project disabled">Em desenvolvimento</span>
-        </div> 
-        <!-- Projeto 3 --> 
-        <div class="project-box">
-          <img src="venus.svg" alt="Gênero feminino">
-          <h3>Mulheres e Desigualdade nas finanças</h3>
-          <p>Analise de gráfico sobre a desigualdade de gênero empresarial. Utilizando Python e dados públicos</p>
-          <span class="btn-project disabled">Em desenvolvimento</span>
+
+    <!-- GRID DE PROJETOS -->
+    <section class="projects-grid">
+
+        <!-- PROJETO 1 -->
+        <div class="project-card">
+            <div class="icon blue">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <h2>Análise da relação entre a renda média estadual e o IDEB anual</h2>
+            <p>
+                Investigação da relação entre renda média estadual e os resultados do IDEB nos anos finais.
+            </p>
+
+            <button class="btn-disabled">Em desenvolvimento</button>
         </div>
-      </div> 
-    </section> 
-  </body>
+
+        <!-- PROJETO 2 -->
+        <div class="project-card">
+            <div class="icon green">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <h2>Estudo de indicadores sociais relacionados a oportunidades</h2>
+            <p>
+                A tecnologia ajuda ou atrapalha os estudantes?
+            </p>
+
+            <button class="btn-disabled">Em desenvolvimento</button>
+        </div>
+
+        <!-- PROJETO 3 -->
+        <div class="project-card">
+            <div class="icon purple">
+                <i class="fa-solid fa-venus-mars"></i>
+            </div>
+
+            <h2>Mulheres e desigualdade nas finanças</h2>
+            <p>
+                Análise de gráfico sobre a desigualdade de gênero empresarial.
+            </p>
+
+            <button class="btn-disabled">Em desenvolvimento</button>
+        </div>
+
+    </section>
+
+</body>
 </html>
