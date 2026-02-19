@@ -164,3 +164,14 @@ body {
 .card-teal {
     background: linear-gradient(135deg, #14b8a6, #0f766e);
 }
+/* ===== LINKS DOS CARDS DA HOME ===== */
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
