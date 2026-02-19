@@ -48,8 +48,8 @@ body {
 .hero h1 {
     font-size: 44px;
     margin-bottom: 15px;
+    color: #0f172a; /* azul marinho quase preto */
 }
-
 .hero p {
     font-size: 18px;
     color: #6c757d;
@@ -90,9 +90,9 @@ body {
 
 .card p {
     font-size: 15px;
-    opacity: 0.9;
+    color: #374151; /* cinza escuro, legível */
+    opacity: 1;
 }
-
 /* CORES */
 .blue {
     background: linear-gradient(135deg, #3b82f6, #2563eb);
