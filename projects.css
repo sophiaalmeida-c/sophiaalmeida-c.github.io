@@ -89,3 +89,20 @@
     border-bottom: 2px solid #2563eb;
     padding-bottom: 4px;
 }
+/* BOTÃO ATIVO - VER DETALHES */
+.btn-active {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-active:hover {
+    background-color: #1e40af;
+    transform: translateY(-1px);
+}
