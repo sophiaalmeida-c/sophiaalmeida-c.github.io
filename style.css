@@ -113,3 +113,54 @@ body {
     font-style: italic;
     color: #6c757d;
 }
+/* ===== CARDS HOME (COLORIDOS) ===== */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 35px 25px;
+    border-radius: 14px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card i {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #e5e7eb;
+}
+
+/* CORES ESPECÍFICAS */
+.card-blue {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.card-purple {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.card-teal {
+    background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
