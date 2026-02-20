@@ -175,45 +175,6 @@ body {
 .card-link:hover {
     text-decoration: none;
 }
-/* ===== LAYOUT DO PROJETO 1 ===== */
-
-.layout {
-    display: grid;
-    grid-template-columns: 3fr 1.2fr;
-    gap: 40px;
-    margin-top: 48px;
-}
-
-.graphs-column {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.graph img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 16px;
-}
-
-.graph-desc {
-    font-size: 13px;
-    color: #4b5563;
-    margin-top: 12px;
-}
-
-.side-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-@media (max-width: 900px) {
-    .layout {
-        grid-template-columns: 1fr;
-    }
-}
 /* ===== LAYOUT PROJETO 1 ===== */
 
 .layout {
