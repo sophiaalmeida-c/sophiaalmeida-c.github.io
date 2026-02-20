@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Metodologia Geral</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+    <h1>Metodologia Geral</h1>
+    <p>Processo e métodos empregados nos projetos de análise de dados.</p>
+</header>
+
+<main class="container">
+
+    <!-- CARDS DE METODOLOGIA -->
+    <section class="methods">
+
+        <div class="method-card">
+            <span class="icon blue">🔍</span>
+            <h3>Definição do Problema</h3>
+            <p>Identificação clara do problema e formulação de hipóteses.</p>
+
+            <button class="toggle">Ver detalhes</button>
+            <div class="details">
+                <p>
+                    Nesta etapa, o foco está em delimitar o escopo da análise,
+                    identificar variáveis relevantes e estabelecer perguntas
+                    investigáveis a partir dos dados disponíveis.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-card">
+            <span class="icon green">🗂️</span>
+            <h3>Coleta de Dados</h3>
+            <p>Uso de bases públicas e fontes confiáveis.</p>
+
+            <button class="toggle">Ver detalhes</button>
+            <div class="details">
+                <p>
+                    São priorizadas bases como IBGE, INEP e ENEM,
+                    garantindo confiabilidade, rastreabilidade e relevância
+                    dos dados utilizados na análise.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-card">
+            <span class="icon orange">🧹</span>
+            <h3>Limpeza e Preparação</h3>
+            <p>Padronização e tratamento de inconsistências.</p>
+
+            <button class="toggle">Ver detalhes</button>
+            <div class="details">
+                <p>
+                    Inclui remoção de dados ausentes, padronização de formatos,
+                    categorização de variáveis e validação da integridade
+                    dos conjuntos de dados.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-card">
+            <span class="icon purple">📊</span>
+            <h3>Análise Exploratória</h3>
+            <p>Exploração estatística e visual dos dados.</p>
+
+            <button class="toggle">Ver detalhes</button>
+            <div class="details">
+                <p>
+                    Utilização de estatísticas descritivas, gráficos e correlações
+                    para identificar padrões, tendências e possíveis relações
+                    entre variáveis.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-card">
+            <span class="icon gray">📄</span>
+            <h3>Documentação</h3>
+            <p>Registro claro do processo e decisões.</p>
+
+            <button class="toggle">Ver detalhes</button>
+            <div class="details">
+                <p>
+                    Toda a metodologia, decisões analíticas e limitações
+                    são documentadas para garantir transparência,
+                    reprodutibilidade e clareza do projeto.
+                </p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<script>
+    const buttons = document.querySelectorAll(".toggle");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const details = btn.nextElementSibling;
+            const open = details.classList.toggle("open");
+            btn.textContent = open ? "Ocultar detalhes" : "Ver detalhes";
+        });
+    });
+</script>
+
+</body>
+</html>
