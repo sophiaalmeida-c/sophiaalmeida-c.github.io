@@ -8,10 +8,8 @@
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- CSS principal do site -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS específico do projeto -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -21,80 +19,94 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 48px 24px;
+            padding: 56px 28px;
         }
 
         .project-header h1 {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 600;
-            color: #0f172a; /* azul marinho quase preto */
-            margin-bottom: 12px;
+            color: #0f172a;
+            margin-bottom: 14px;
         }
 
         .project-header p {
-            font-size: 15px;
+            font-size: 16px;
             color: #4b5563;
-            max-width: 800px;
+            max-width: 900px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 32px;
-            margin-top: 40px;
+            grid-template-columns: 3fr 1.2fr;
+            gap: 36px;
+            margin-top: 48px;
+            align-items: start;
         }
 
         .card {
             background: #ffffff;
-            border-radius: 16px;
-            padding: 28px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.06);
         }
 
         .card h2 {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             color: #1e3a8a;
         }
 
         .card p {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 14.5px;
+            line-height: 1.65;
             color: #374151;
+        }
+
+        /* ÁREA DOS GRÁFICOS */
+        .graph {
+            padding: 36px;
         }
 
         .graph img {
             width: 100%;
-            border-radius: 12px;
+            max-height: 520px;
+            object-fit: contain;
+            margin-top: 10px;
         }
 
+        /* CARDS LATERAIS */
         .side-card {
             display: flex;
-            gap: 14px;
-            margin-bottom: 20px;
+            gap: 16px;
+            margin-bottom: 22px;
         }
 
         .icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
             font-weight: 600;
+            flex-shrink: 0;
         }
 
         .icon.blue { background: #e0ecff; color: #2563eb; }
         .icon.orange { background: #fdebd3; color: #d97706; }
         .icon.purple { background: #ede9fe; color: #7c3aed; }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
             .grid {
                 grid-template-columns: 1fr;
+            }
+
+            .graph img {
+                max-height: 420px;
             }
         }
     </style>
@@ -116,24 +128,22 @@
     <!-- CONTEÚDO -->
     <div class="grid">
 
-        <!-- COLUNA PRINCIPAL (GRÁFICOS) -->
+        <!-- COLUNA CENTRAL — GRÁFICOS -->
         <div>
 
-            <!-- GRÁFICO 1 — BARRAS -->
             <div class="card graph">
                 <h2>IDEB por estado (anos finais, 2019)</h2>
                 <img src="ideb_estados.png" alt="Gráfico de barras do IDEB por estado em 2019">
-                <p style="font-size:13px; color:#4b5563; margin-top:10px;">
+                <p style="font-size:13.5px; color:#4b5563; margin-top:14px;">
                     O gráfico apresenta a distribuição do IDEB entre os estados brasileiros, evidenciando
                     desigualdades regionais no desempenho educacional.
                 </p>
             </div>
 
-            <!-- GRÁFICO 2 — DISPERSÃO -->
-            <div class="card graph" style="margin-top:32px;">
+            <div class="card graph" style="margin-top:40px;">
                 <h2>Relação entre renda média estadual e IDEB</h2>
                 <img src="rendamedia-ideb.png" alt="Gráfico de dispersão entre renda média e IDEB por estado">
-                <p style="font-size:13px; color:#4b5563; margin-top:10px;">
+                <p style="font-size:13.5px; color:#4b5563; margin-top:14px;">
                     Cada ponto representa uma unidade federativa. Observa-se uma tendência positiva entre renda média
                     estadual e IDEB, embora com dispersão significativa, indicando que a renda não é o único fator
                     associado ao desempenho educacional.
@@ -150,8 +160,8 @@
                 <div>
                     <h2>Contexto da Análise</h2>
                     <p>
-                        A análise utiliza dados do IDEB (INEP) e da renda média domiciliar per capita (IBGE – PNAD Contínua),
-                        considerando exclusivamente os anos finais do ensino fundamental no ano de 2019.
+                        Dados do IDEB (INEP) e da renda média domiciliar per capita (IBGE – PNAD Contínua),
+                        considerando os anos finais do ensino fundamental em 2019.
                     </p>
                 </div>
             </div>
@@ -161,8 +171,8 @@
                 <div>
                     <h2>Achados Preliminares</h2>
                     <p>
-                        Observa-se uma tendência positiva entre renda média estadual e desempenho no IDEB, embora existam
-                        exceções, sugerindo a influência de múltiplos fatores socioeconômicos e educacionais.
+                        Há uma tendência positiva entre renda média estadual e IDEB, com exceções,
+                        indicando a influência de múltiplos fatores socioeconômicos e educacionais.
                     </p>
                 </div>
             </div>
@@ -172,9 +182,8 @@
                 <div>
                     <h2>Observações & Limitações</h2>
                     <p>
-                        Trata-se de uma análise exploratória, que não controla outras variáveis relevantes, como
-                        investimentos educacionais, políticas públicas, infraestrutura escolar ou características
-                        demográficas dos estados.
+                        Análise exploratória sem controle de variáveis como investimento público,
+                        políticas educacionais ou infraestrutura escolar.
                     </p>
                 </div>
             </div>
