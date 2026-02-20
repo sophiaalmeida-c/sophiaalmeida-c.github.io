@@ -8,8 +8,6 @@
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -19,16 +17,17 @@
         }
 
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 56px 28px;
+            padding: 64px 32px;
         }
 
+        /* CABEÇALHO */
         .project-header h1 {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 600;
             color: #0f172a;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
         .project-header p {
@@ -37,49 +36,54 @@
             max-width: 900px;
         }
 
+        /* GRID PRINCIPAL */
         .grid {
             display: grid;
-            grid-template-columns: 3fr 1.2fr;
-            gap: 36px;
-            margin-top: 48px;
+            grid-template-columns: 3.8fr 1.2fr;
+            gap: 56px;
+            margin-top: 64px;
             align-items: start;
         }
 
+        /* CARDS */
         .card {
             background: #ffffff;
             border-radius: 18px;
-            padding: 32px;
+            padding: 40px;
             box-shadow: 0 12px 32px rgba(0,0,0,0.06);
         }
 
         .card h2 {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             color: #1e3a8a;
         }
 
         .card p {
-            font-size: 14.5px;
-            line-height: 1.65;
+            font-size: 15px;
+            line-height: 1.7;
             color: #374151;
         }
 
-        /* ÁREA DOS GRÁFICOS */
+        /* GRÁFICOS */
         .graph {
-    padding: 40px ;
-}
+            margin-bottom: 48px;
+        }
+
         .graph img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 16px;
-}
-        /* CARDS LATERAIS */
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        /* COLUNA LATERAL */
         .side-card {
             display: flex;
             gap: 16px;
-            margin-bottom: 22px;
+            margin-bottom: 28px;
         }
 
         .icon {
@@ -90,27 +94,25 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            font-weight: 600;
             flex-shrink: 0;
         }
 
-        .icon.blue { background: #e0ecff; color: #2563eb; }
         .icon.orange { background: #fdebd3; color: #d97706; }
         .icon.purple { background: #ede9fe; color: #7c3aed; }
 
-        @media (max-width: 1000px) 
-        /* LAYOUT PRINCIPAL */
-.layout {
-    display: grid;
-    grid-template-columns: 3.5fr 1.2fr;
-    gap: 48px;
-    margin-top: 56px;
-    align-items: start;
-}
+        /* RESPONSIVO */
+        @media (max-width: 1000px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-
-</style>
+            .card {
+                padding: 28px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -119,40 +121,44 @@
     <div class="project-header">
         <h1>Análise da relação entre renda média e o IDEB nos anos finais do ensino fundamental (2019)</h1>
         <p>
-           Nessa pesquisa, eu analisei os dados referentes a renda média e o IDEB por estado, para saber com certeza se os fatores estão relacionados. Os dados usados são do ano de 2019 do INEP e IBGE.
+            Nesta pesquisa, analisei dados de renda média estadual e IDEB para investigar se há relação
+            entre fatores socioeconômicos e desempenho educacional. Os dados são de 2019 (INEP e IBGE).
         </p>
     </div>
 
+    <!-- GRID -->
     <div class="grid">
 
-    <div>
-        <div class="card graph">
-            <h2>IDEB por estado (anos finais, 2019)</h2>
-            <img src="ideb_estados.png">
-            <p>O gráfico em barras representa o IDEB por estado.</p>
+        <!-- COLUNA PRINCIPAL (GRÁFICOS) -->
+        <div>
+            <div class="card graph">
+                <h2>IDEB por estado (anos finais, 2019)</h2>
+                <img src="ideb_estados.png" alt="Gráfico de barras do IDEB por estado">
+                <p>
+                    O gráfico de barras apresenta o IDEB dos anos finais do ensino fundamental
+                    para cada estado brasileiro em 2019.
+                </p>
+            </div>
+
+            <div class="card graph">
+                <h2>Relação entre renda média estadual e IDEB</h2>
+                <img src="rendamedia-ideb.png" alt="Gráfico de dispersão entre renda média e IDEB">
+                <p>
+                    Cada ponto representa um estado, permitindo observar a relação entre renda média
+                    e desempenho educacional.
+                </p>
+            </div>
         </div>
 
-        <div class="card graph">
-            <h2>Relação entre renda média estadual e IDEB</h2>
-            <img src="rendamedia-ideb.png">
-            <p>Cada ponto representa um estado.</p>
-        </div>
-    </div>
-
-    <div>
-        <!-- cards laterais -->
-    </div>
-
-</div>       
-                    
-
+        <!-- COLUNA LATERAL -->
+        <div>
             <div class="card side-card">
                 <div class="icon orange">💡</div>
                 <div>
                     <h2>Achados Preliminares</h2>
                     <p>
-                        Há uma tendência positiva entre renda média estadual e desempenho no IDEB,
-                        mas a relação não é exata, uma alta renda média não significa um alto IDEB anual.
+                        Existe uma tendência positiva entre renda média estadual e IDEB,
+                        porém a relação não é determinística.
                     </p>
                 </div>
             </div>
@@ -162,15 +168,16 @@
                 <div>
                     <h2>Observações & Limitações</h2>
                     <p>
-                        Podemos observar que, embora os estados com maior renda tenham um IDEB alto, os estados com renda baixa também possuem um Alto IDEB, como o Ceará, que ocupa a segunda posição no ranking de IDEB.
+                        Estados com renda mais baixa também podem apresentar IDEB elevado,
+                        como o Ceará. Já o Distrito Federal, apesar da alta renda,
+                        não lidera o ranking.
                     </p>
-                        <p>Entretando, também observamos que o Distrito federal possui a maior renda per capita e mesmo assim fica em 11 posição, com um IDEB de 4,6.</p>
                 </div>
             </div>
-
         </div>
 
     </div>
 </div>
 
 </body>
+</html>
