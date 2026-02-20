@@ -642,3 +642,33 @@ body {
     white-space: nowrap;
   }
 }
+/* ===== HEADER MOBILE AJUSTADO ===== */
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    flex-direction: column;   /* 🔑 título em cima, abas embaixo */
+    align-items: center;
+    gap: 12px;
+    padding: 16px 12px;
+  }
+
+  .navbar .logo {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;          /* 🔑 permite quebrar linha */
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navbar nav a {
+    font-size: 14px;
+    white-space: nowrap;      /* impede quebra feia de texto */
+  }
+}
