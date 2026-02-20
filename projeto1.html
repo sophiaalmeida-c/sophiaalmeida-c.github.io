@@ -67,7 +67,7 @@
 
         /* ÁREA DOS GRÁFICOS */
         .graph {
-    padding: 40px 70px;
+    padding: 40px ;
 }
         .graph img {
     width: 100%;
@@ -99,15 +99,36 @@
         .icon.purple { background: #ede9fe; color: #7c3aed; }
 
         @media (max-width: 1000px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
+    .layout {
+        grid-template-columns: 1fr;
+    }
 
-            .graph img {
-                max-height: 420px;
-            }
+    .graph {
+        padding: 28px;
+    }
         }
-    </style>
+        /* LAYOUT PRINCIPAL */
+.layout {
+    display: grid;
+    grid-template-columns: 3.5fr 1.2fr;
+    gap: 48px;
+    margin-top: 56px;
+    align-items: start;
+}
+
+/* COLUNA DOS GRÁFICOS */
+.graphs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* COLUNA LATERAL */
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}    </style>
 </head>
 <body>
 
@@ -176,7 +197,7 @@
                     <h2>Observações & Limitações</h2>
                     <p>
                         Podemos observar que, embora os estados com maior renda tenham um IDEB alto, os estados com renda baixa também possuem um Alto IDEB, como o Ceará, que ocupa a segunda posição no ranking de IDEB.
-                    </p
+                    </p>
                         <p>Entretando, também observamos que o Distrito federal possui a maior renda per capita e mesmo assim fica em 11 posição, com um IDEB de 4,6.</p>
                 </div>
             </div>
