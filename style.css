@@ -214,3 +214,45 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* ===== LAYOUT PROJETO 1 ===== */
+
+.layout {
+    display: grid;
+    grid-template-columns: 3.5fr 1.2fr;
+    gap: 56px;
+    margin-top: 64px;
+    align-items: start;
+}
+
+.graphs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.graph {
+    padding: 40px;
+}
+
+.graph img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .graph {
+        padding: 28px;
+    }
+}
