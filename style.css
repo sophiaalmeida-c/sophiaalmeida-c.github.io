@@ -598,3 +598,23 @@ body {
     display: none;
   }
 }
+/* MENU MOBILE EM UMA LINHA */
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    padding: 10px 0;
+  }
+
+  nav a {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+}
