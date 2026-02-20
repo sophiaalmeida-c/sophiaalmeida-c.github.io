@@ -117,49 +117,47 @@
     <div class="project-header">
         <h1>Análise da relação entre renda média e o IDEB nos anos finais do ensino fundamental (2019)</h1>
         <p>
-            Este projeto investiga a relação entre a renda média domiciliar per capita dos estados brasileiros
-            e os resultados do IDEB nos anos finais do ensino fundamental, com base em dados públicos do INEP e do IBGE
-            referentes ao ano de 2019.
+            Este projeto investiga a relação entre a renda média dos estados brasileiros e os resultados do IDEB
+            nos anos finais do ensino fundamental, utilizando dados públicos referentes ao ano de 2019.
         </p>
     </div>
 
-    <!-- CONTEÚDO -->
-    <div class="grid">
+    <!-- LAYOUT PRINCIPAL -->
+    <div class="layout">
 
-        <!-- COLUNA CENTRAL — GRÁFICOS -->
-        <div>
+        <!-- COLUNA DOS GRÁFICOS -->
+        <div class="graphs-column">
 
             <div class="card graph">
                 <h2>IDEB por estado (anos finais, 2019)</h2>
-                <img src="ideb_estados.png" alt="Gráfico de barras do IDEB por estado em 2019">
-                <p style="font-size:13.5px; color:#4b5563; margin-top:14px;">
-                    O gráfico apresenta a distribuição do IDEB entre os estados brasileiros, evidenciando
-                    desigualdades regionais no desempenho educacional.
+                <img src="ideb_estados.png" alt="Gráfico de barras do IDEB por estado">
+                <p class="graph-desc">
+                    O gráfico apresenta a distribuição do IDEB entre os estados brasileiros,
+                    evidenciando desigualdades regionais no desempenho educacional.
                 </p>
             </div>
 
-            <div class="card graph" style="margin-top:40px;">
+            <div class="card graph">
                 <h2>Relação entre renda média estadual e IDEB</h2>
-                <img src="rendamedia-ideb.png" alt="Gráfico de dispersão entre renda média e IDEB por estado">
-                <p style="font-size:13.5px; color:#4b5563; margin-top:14px;">
-                    Cada ponto representa uma unidade federativa. Observa-se uma tendência positiva entre renda média
-                    estadual e IDEB, embora com dispersão significativa, indicando que a renda não é o único fator
-                    associado ao desempenho educacional.
+                <img src="rendamedia-ideb.png" alt="Gráfico de dispersão entre renda média e IDEB">
+                <p class="graph-desc">
+                    Cada ponto representa uma unidade federativa. Observa-se uma tendência positiva
+                    entre renda média estadual e IDEB, embora com dispersão significativa.
                 </p>
             </div>
 
         </div>
 
         <!-- COLUNA LATERAL -->
-        <div>
+        <div class="side-column">
 
             <div class="card side-card">
                 <div class="icon blue">🔍</div>
                 <div>
                     <h2>Contexto da Análise</h2>
                     <p>
-                        Dados do IDEB (INEP) e da renda média domiciliar per capita (IBGE – PNAD Contínua),
-                        considerando os anos finais do ensino fundamental em 2019.
+                        Dados do IDEB (INEP) e da renda média domiciliar per capita
+                        (IBGE – PNAD Contínua) referentes a 2019.
                     </p>
                 </div>
             </div>
@@ -169,8 +167,8 @@
                 <div>
                     <h2>Achados Preliminares</h2>
                     <p>
-                        Há uma tendência positiva entre renda média estadual e IDEB, com exceções,
-                        indicando a influência de múltiplos fatores socioeconômicos e educacionais.
+                        Há uma tendência positiva entre renda média estadual e desempenho no IDEB,
+                        mas a relação não é determinística.
                     </p>
                 </div>
             </div>
@@ -180,16 +178,15 @@
                 <div>
                     <h2>Observações & Limitações</h2>
                     <p>
-                        Análise exploratória sem controle de variáveis como investimento público,
-                        políticas educacionais ou infraestrutura escolar.
+                        Análise exploratória, sem controle de variáveis como investimento educacional
+                        ou políticas públicas.
                     </p>
                 </div>
             </div>
 
         </div>
-    </div>
 
+    </div>
 </div>
 
 </body>
-</html>
